@@ -8,77 +8,114 @@
     <link rel="stylesheet" href="/src/style/root.css">
 </head>
 
-<body>
+<body class="banner">
     <main>
-        <div class="Mensagem-principal">
-            <h1> Será que custa tão caro <span id="bold-roxo">mudar</span> uma <span id="bold-vermelho">vida</span>
+        <div class="texto-principal">
+            <h1> Será que custa tão caro <span class="bold-roxo">mudar</span> uma <span
+                    class="bold-vermelho">vida?</span>
             </h1>
             <p>Num mundo onde tantas crianças sofrem com a escassez e a miséria, poderiamos <span
                     class="semibold">juntos</span>, com
                 pequenas quantias, <span class="semibold">mudar de verdade</span> a realidade delas?</p>
         </div>
-        <div class="Logo">
-            <img src="/src/assets/images/GIicone.PNG"
-                alt="Icone em formato de escudo com uma borda preta por fora, seguido por uma borda amarela interna, com duas crianças, uma menina de cabelo curto e vestido vermelho, e um garoto de cabelo curto e camiseta azul, levantando os braços e segurando a mão um da outro, com dois sorrisos nos rostos">
-        </div>
+        <img class="logo" src="/src/assets/images/GuardiõesLogo.png"
+            alt="Icone em formato de escudo com uma borda preta por fora, seguido por uma borda amarela interna, com duas crianças, uma menina de cabelo curto e vestido vermelho, e um garoto de cabelo curto e camiseta azul, levantando os braços e segurando a mão um da outro, com dois sorrisos nos rostos">
     </main>
+
     <section class="Gente-como-vc">
-        <div class="Texto-sobre">
-            <h2>Gente como <span>você</span></h2>
-            <p>
-                A ONG <span class="roxo-letras">Guardiões da Infância</span> existe desde 2017, formada por um grupo de
-                pessoas comuns que não ganham muito com seus empregos, mas(!) que decidiram fazer o possível para
-                <span class="roxo-letras">realizarem um sonho:</span> dar as crianças uma <span class="semibold">vida
-                    decente.</span>
-            </p>
-            <button class="semibold">Já quero ajudar</button>
-        </div>
-        <div class="Imagem-voluntário">
-            <img src="src/assets/images/Homi ajudando.png"
-                alt="Imagem de um homem jovem com um sorriso no rosto, camiseta branca e crachá de voluntário doando um saco de pães para uma pessoa fora da tela, enquanto uma mãe de blusa amarela e camiseta branca está com a filha em sua frente, entre os braços, uma criança sorridente">
-        </div>
+        <h2>Gente como <span>você</span></h2>
+        <p>
+            A ONG <span class="roxo-letras">Guardiões da Infância</span> existe desde 2017, formada por um grupo de
+            pessoas comuns que não ganham muito com seus empregos, mas(!) que decidiram fazer o possível para
+            <span class="roxo-letras">realizarem um sonho:</span> dar as crianças uma <span class="semibold"> vida
+                decente.</span>
+        </p>
+        <button class="semibold">Já quero ajudar</button>
     </section>
-    <section class="Iniciativas">
-        <div class="Cards-iniciativas">
-            <div class="card-iniciativa">
-                <div class="imagem-iniciativa">
-                    <img src="src/assets/images/cesta-alimentos.png"
-                        alt="uma caixa de papelão com alimentos diversificados, como beringelas, pães, grãos, frutas e legumes">
-                </div>
-                <div class="progresso-container">
-                    <div class="barra-progresso">
-                        <div class="progredido">
-                            <div class="bolinha-progresso">24%</div>
+
+    <img class="onda-roxa" src="src/assets/images/Onda-roxa.png" alt="Uma onda irregular roxa, separando a página">
+
+    <section class="iniciativas">
+        <h2><span class="bold-azul">Iniciativas</span> em Andamento</h2>
+
+        <p class="inic-paragrafo1">Quando várias pessoas doam pequenas quantias, É SIM possível criar um <span
+                class="semibold">impacto
+                real</span> na vida de <span class="semibold">centenas de crianças.</span>
+        </p>
+
+        <p class="inic-paragrafo2">Veja através do que já fizemos, <span class="semibold">juntos:</span></p>
+
+
+        <div class="cards-iniciativas">
+
+            <div class="card-feirão">
+                <img src="src/assets/images/feira_frutas.png"
+                    alt="uma caixa de papelão com alimentos diversificados, como beringelas, pães, grãos, frutas e legumes">
+                <div class="card-descrição">
+                    <div class="progress-bar">
+                        <div class="progress">71,6%</div>
+                    </div>
+                    <p>Feirão de compras: alimentando os pequenos</p>
+                    <div class="card-quantias">
+                        <div class="quantia-arrecadada">
+                            <p>Arrecadados</p>
+                            <strong>R$2150</strong>
+                        </div>
+
+                        <div class="quantia-meta">
+                            <p>Nossa Meta</p>
+                            <strong>R$3000</strong>
                         </div>
                     </div>
                 </div>
+            </div>
 
-                <p class="card-descrição">Mega-compra no atacado em promoção</p>
-
-                <div class="rodape-card">
-                    <div class="quantia-arrecadada">
-                        <p>Arrecadados</p>
-                        <strong>R$1200</strong>
+            <div class="card-roupas">
+                <img src="src/assets/images/doação-roupas.png" alt="">
+                <div class="card-descrição">
+                    <div class="progress-bar">
+                        <div class="progress">22%</div>
                     </div>
+                    <p>Dooção de Roupas para as creches de Roraima</p>
+                    <div class="card-quantias">
+                        <div class="quantia-arrecadada">
+                            <p>Arrecadadas</p>
+                            <strong>33 peças</strong>
+                        </div>
 
-                    <div class="quantia-meta">
-                        <p>Nossa Meta</p>
-                        <strong>R5000</strong>
+                        <div class="quantia-meta">
+                            <p>Nossa Meta</p>
+                            <strong>150 peças</strong>
+                        </div>
                     </div>
                 </div>
-
-                <button class="mais-iniciativas">confira mais iniciativas</button>
-
-                <button>
-                    <img src="src/assets/images/Seta-esquerda.png" alt="seta cinza apontando para a esquerda">
-                </button>
-
-                <button>
-                    <img src="src/assets/images/Seta-direita.png" alt="seta azul apontando para a direita">
-                </button>
-
             </div>
+
+            <div class="card-maternidade">
+                <img src="src/assets/images/bebe_brinquedo.png"
+                    alt="um bebê uma fralda branca sentado de costas ao lado de um urso de pelúcia com uma fralda branca e com o braço esquerdo abraçando o bebê, ambos em cima de tapete branco">
+                <div class="card-descrição">
+                    <div class="progress-bar">
+                        <div class="progress">62,9%</div>
+                    </div>
+                    <p>Apoio maternidade: fraldas e kits de higiene para bebês</p>
+                    <div class="card-quantias">
+                        <div class="quantia-arrecadada">
+                            <p>Arrecadados</p>
+                            <strong>R$629</strong>
+                        </div>
+
+                        <div class="quantia-meta">
+                            <p>Nossa Meta</p>
+                            <strong>R$999</strong>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
         </div>
+        <button class="semibold">confira mais iniciativas</button>
     </section>
 </body>
 

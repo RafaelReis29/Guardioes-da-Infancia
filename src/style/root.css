@@ -8,7 +8,6 @@
     box-sizing: border-box;
     text-decoration: none;
     border: none;
-    background: none;
     font-family: "Poppins", sans-serif;
 }
 
@@ -17,168 +16,282 @@
     --white-color: #FFFFFF;
     --black-color: #000000;
     --black-shadow: rgba(0, 0, 0, 0.7);
-    --gray-color-tex: #A6A6A6;
+    --gray-color-text: #c8c8c8;
     --purple: #8338EA;
     --blue: #3A86FE;
     --yellow: #FFBF0c;
     --red: #FE006F;
+    font-size: clamp(0.2rem, 1vw, 1.2rem);
 }
 
-/* main */
+/* Estilização das fontes das páginas e definição de seus spans */
 
-.Mensagem-principal h1 {
-    font-weight: bold;
-    font-size: 87px;
-}
-
-
-#bold-roxo {
+.bold-roxo {
     color: var(--purple);
     font-weight: bold;
 }
 
-#bold-vermelho {
+.bold-vermelho {
     color: var(--red);
     font-weight: bold;
 }
 
-.semi-bold {
+.bold-azul {
+    color: var(--blue);
+    font-weight: bold;
+}
+
+.semibold {
     font-weight: 600
-}
-
-/* Section Gente como você */
-
-.Texto-sobre {}
-
-.Texto-sobre h2 {
-    font-weight: bold font-size: 78px;
-}
-
-.Texto-sobre p {
-    font-size: 40px;
 }
 
 .roxo-letras {
     color: var(--purple);
+    font-weight: 600;
+}
+
+/* Banner no background do Body */
+
+.banner {
+    background: url('/src/assets/images/background.png') no-repeat top center;
+    background-size: 100vw 43rem;
+    /* exibe o background do topo da página na classe especifica do body da landing page apenas  */
+}
+
+/* Deinições de tamanhos, posições e layout geral do main */
+
+main {
+    display: flex;
+    flex-flow: nowrap column-reverse;
+    align-items: center;
+    width: 100vw;
+    height: auto;
+    gap: 3rem;
+    padding: 0 2vw;
+}
+
+/* padding: 15vh 0vw; */
+
+.texto-principal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 4rem;
+}
+
+.texto-principal h1 {
+    text-align: center;
+    font-weight: bold;
+    font-size: 7rem;
+    line-height: 1.4;
+    max-width: 20ch;
+}
+
+.texto-principal p {
+    text-align: center;
+    font-size: 2.5rem;
+    line-height: 1.7;
+    max-width: 50ch;
+    margin-bottom: 3rem;
+}
+
+.logo {
+    height: 43rem;
+    width: auto;
+    display: block;
+}
+
+/* Section Gente como você */
+
+
+.Gente-como-vc {
+    display: flex;
+    flex-flow: nowrap column;
+    align-items: center;
+    gap: 3rem;
+}
+
+
+.Gente-como-vc h2 {
+    text-align: center;
+    font-weight: bold;
+    font-size: 6rem;
+    line-height: 1.4;
+}
+
+.Gente-como-vc p {
+    text-align: center;
+    font-size: 2.5rem;
+    line-height: 1.7;
+    max-width: 50ch;
 }
 
 .Gente-como-vc button {
     background-color: var(--purple);
     color: var(--white-color);
-    font-size: ;
+    font-size: 2rem;
+    padding: 1rem 3rem;
+    margin: 3rem 0;
+    border-radius: 9999px;
+    cursor: pointer;
+}
+
+.onda-roxa {
+    width: 100vw;
+    height: auto;
+    margin: 9rem 0;
 }
 
 /* Section Iniciativas */
 
-.card-iniciativa {
-    width: 100%;
-    max-width: 400px;
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 4px 10px var(--black-shadow) background-color: var(--bg-color) display: flex;
-    flex-direction: column;
-    margin: 0 auto;
-    /* Centraliza se tiver espaço */
-}
-
-.imagem-iniciativa img {
+.iniciativas {
+    display: flex;
+    flex-flow: nowrap column;
+    justify-content: center;
+    align-items: center;
     width: 100%;
     height: auto;
-    display: block;
+    margin-top: 4rem;
+    gap: 3rem;
 }
 
-.progresso-container {
-    padding: 10px 20px;
+.iniciativas h2 {
+    text-align: center;
+    font-weight: bold;
+    font-size: 6rem;
+    line-height: 1.4;
 }
 
-.barra-progresso {
+.inic-paragrafo1 {
+    text-align: center;
+    font-size: 2.5rem;
+    line-height: 1.7;
+    max-width: 58ch;
+}
+
+.inic-paragrafo2 {
+    text-align: center;
+    font-size: 2.5rem;
+    line-height: 1.7;
+    max-width: 50ch
+}
+
+.cards-iniciativas {
+    display: flex;
+    flex-flow: wrap row;
+    justify-content: center;
     width: 100%;
-    height: 20px;
-    background: var(--gray-color-tex);
-    border-radius: 10px;
-    position: relative;
-    box-shadow: inset 0 0 5px var(--black-shadow);
+    height: auto;
 }
 
-.progredido {
-    height: 100%;
-    background: var(--blue);
-    width: 57%;
-    /* Ajuste conforme necessário */
-    border-radius: 10px 0 0 10px;
-    position: relative;
-    transition: width 0.4s ease;
-    /* animação suave */
+.card-feirão,
+.card-roupas,
+.card-maternidade {
+    width: clamp(200px, 40rem, 40rem);
+    margin: 4rem;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    font-size: clamp (0, 0, 4rem);
+    transition: 0.3s;
+    border-radius: 3rem;
+    border:
 }
 
-.bolinha-progresso {
-    position: absolute;
-    right: 0;
-    top: 50%;
-    transform: translate(50%, -50%);
-    background: var(--blue);
-    color: white;
-    font-size: 12px;
-    padding: 4px 6px;
-    border-radius: 50%;
-    box-shadow: 0 0 5px var(--black-shadow) white-space: nowrap;
+.card-feirão:hover,
+.card-roupas:hover,
+.card-maternidade:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.cards-iniciativas img {
+    width: 100%;
+    height: auto;
+    border-radius: 3rem 3rem 0 0;
 }
 
 .card-descrição {
-    padding: 10px 20px;
-    font-size: 14px;
-    color: var(--black-color)
-}
-
-.rodape-card {
+    width: 100%;
+    padding: 1rem 2rem;
+    gap: 1.5rem;
     display: flex;
+    flex-flow: nowrap column;
+}
+
+.card-descrição p {
+    font-size: 2.5rem;
+    font-weight: 500;
+}
+
+.card-quantias {
+    display: flex;
+    flex-flow: wrap row;
     justify-content: space-between;
-    gap: 20px;
-    padding: 10px 20px 20px;
-    font-size: 14px;
-    flex-wrap: wrap;
 }
 
-.rodape-card p {
-    display: block;
-    color: var(--black-color) font-size: 12px;
-    margin-bottom: 4px;
+.card-quantias p {
+    font-size: 2.2rem;
+    font-weight: 600;
+    color: var(--blue);
 }
 
-.rodape-card strong {
-    font-size: 14px;
-    color: var(--black-color)
+.card-quantias strong {
+    font-size: 2.5rem;
 }
 
-/* ✅ RESPONSIVO */
-@media (max-width: 500px) {
-    .card-iniciativa {
-        max-width: 90%;
-    }
-
-    .progresso-container {
-        padding: 8px 12px;
-    }
-
-    .card-descrição {
-        padding: 8px 12px;
-        font-size: 13px;
-    }
-
-    .rodape-card {
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 8px 12px 12px;
-        gap: 10px;
-    }
-
-    .bolinha-progresso {
-        font-size: 10px;
-        padding: 3px 5px;
-    }
+.progress-bar {
+    width: 100%;
+    height: 3rem;
+    background-color: var(--gray-color-text);
+    border-radius: 3rem;
+    box-shadow: inset 0 4px 4px rgba(0, 0, 0, 0.2);
 }
 
-.mais-iniciativas {
+.card-feirão .progress {
+    width: 71.6%;
+    height: 3rem;
     background-color: var(--blue);
     color: var(--white-color);
+    border-radius: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.7rem;
+    font-weight: 500;
+}
+
+.card-roupas .progress {
+    width: 22%;
+    height: 3rem;
+    background-color: var(--blue);
+    color: var(--white-color);
+    border-radius: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.7rem;
+    font-weight: 500;
+}
+
+.card-maternidade .progress {
+    width: 62.9%;
+    height: 3rem;
+    background-color: var(--blue);
+    color: var(--white-color);
+    border-radius: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.7rem;
+    font-weight: 500;
+}
+
+.iniciativas button {
+    background-color: var(--blue);
+    color: var(--white-color);
+    font-size: 2rem;
+    padding: 1rem 3em;
+    border-radius: 9999px;
+    margin: 3rem 0;
+    cursor: pointer;
 }
