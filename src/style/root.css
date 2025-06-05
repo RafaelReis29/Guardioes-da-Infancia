@@ -50,15 +50,90 @@
     font-weight: 600;
 }
 
+/* --- */
+/* PÁGINA INÍCIO / LANDING PAGE */
+/* --- */
+
 /* Banner no background do Body */
 
-.banner {
-    background: url('/src/assets/images/background.png') no-repeat top center;
-    background-size: 100vw 43rem;
+.hero-inicio {
+    background: url('/src/assets/images/BG-inicio.png') no-repeat top center;
+    background-size: 100vw 37rem;
     /* exibe o background do topo da página na classe especifica do body da landing page apenas  */
 }
 
-/* Deinições de tamanhos, posições e layout geral do main */
+.hero-inicio img {
+    height: 37rem;
+    width: auto;
+    display: flex;
+    justify-content: center;
+}
+
+/* CABEÇALHO  */
+
+.header {
+    margin: 0;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins";
+}
+
+.logo {
+    transition: transform 0.6s ease-in-out;
+}
+
+.logo:hover {
+    transform: translateY(-5px) scale(1.05);
+}
+
+header {
+    height: 115px;
+    background: linear-gradient(90deg, #8338EA, #FF368E);
+    padding: 15px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 60px;
+
+}
+
+nav ul li a {
+    font-size: 22px;
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    padding: 10px;
+}
+
+.botão {
+    background-color: #FFBF0C;
+    color: white;
+    border-radius: 80px;
+    font-weight: 600;
+    transform: scale(1.02);
+    box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.15);
+}
+
+/* MAIN */
+/* Deinições de tamanhos, posições e layout geral */
 
 main {
     display: flex;
@@ -69,8 +144,6 @@ main {
     gap: 3rem;
     padding: 0 2vw;
 }
-
-/* padding: 15vh 0vw; */
 
 .texto-principal {
     display: flex;
@@ -97,14 +170,7 @@ main {
     margin-bottom: 3rem;
 }
 
-.logo {
-    height: 43rem;
-    width: auto;
-    display: block;
-}
-
-/* Section Gente como você */
-
+/* SECTION GENTE-COMO-VOCÊ */
 
 .Gente-como-vc {
     display: flex;
@@ -112,7 +178,6 @@ main {
     align-items: center;
     gap: 3rem;
 }
-
 
 .Gente-como-vc h2 {
     text-align: center;
@@ -138,13 +203,115 @@ main {
     cursor: pointer;
 }
 
+/* Onda roxa divisória */
+
 .onda-roxa {
     width: 100vw;
     height: auto;
     margin: 9rem 0;
 }
 
-/* Section Iniciativas */
+/*  SECTION HISTÓRIAS */
+
+.historias {
+    text-align: center;
+    padding: 20px;
+    background-color: white;
+    font-family: "poppins";
+    font-size: 34px
+}
+
+.historias h2 {
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+.historias p {
+    font-size: 18px;
+    margin-bottom: 40px;
+    line-height: 1.5;
+    color: #333;
+    padding: 15px;
+}
+
+.cartoes {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+    padding: 30px;
+}
+
+.cartao {
+    background-color: white;
+    border-radius: 15px;
+    width: 300px;
+    height: 350px;
+    text-align: left;
+    border: 10px solid #FE006F;
+    margin: 20px;
+}
+
+.cartao img {
+    width: 100%;
+    height: 200px;
+    border-radius: 9px;
+    display: block;
+}
+
+.cartao h3 {
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: #333;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+.cartao .data {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 10px;
+    float: left;
+    margin-top: 10px;
+}
+
+.cartao a {
+    display: inline-block;
+    font-size: 14px;
+    color: #FE006F;
+    border: 1px solid #FE006F;
+    padding: 6px 12px;
+    border-radius: 20px;
+    text-decoration: none;
+    transition: 0.3s;
+    display: inline-block;
+    text-align: right;
+    margin-bottom: 10px;
+}
+
+.cartao a:hover {
+    background-color: #FE006F;
+    color: white;
+}
+
+.catalogo {
+    background-color: #FE006F;
+    color: white;
+    font-size: 28px;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 30px;
+    cursor: pointer;
+    height: 66px;
+}
+
+.catalogo:hover {
+    background-color: #FE006F;
+}
+
+
+/* SECTION INICIATIVAS */
 
 .iniciativas {
     display: flex;
@@ -195,7 +362,7 @@ main {
     font-size: clamp (0, 0, 4rem);
     transition: 0.3s;
     border-radius: 3rem;
-    border:
+    /* border reminder */
 }
 
 .card-feirão:hover,
@@ -294,4 +461,261 @@ main {
     border-radius: 9999px;
     margin: 3rem 0;
     cursor: pointer;
+}
+
+/* SECTION DOAÇÃO - FORMULÁRIO */
+
+.doacao {
+    text-align: center;
+    font-size: 34px;
+}
+
+.titulo {
+    font-size: 24px;
+    margin-bottom: 30px;
+}
+
+.cartao-doacao {
+    background-color: white;
+    border: 10px solid #FFBF0C;
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    flex-wrap: wrap;
+    border-radius: 50px;
+}
+
+
+.lado-esquerdo {
+    flex: 1;
+    min-width: 300px;
+}
+
+.campo-valor {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    border-radius: 12px;
+    padding: 12px 18px;
+    margin-bottom: 25px;
+    font-size: 18px;
+}
+
+.campo-valor span {
+    margin-right: 10px;
+    font-weight: bold;
+
+}
+
+.campo-valor input {
+    border: none;
+    background: transparent;
+    font-size: 18px;
+    width: 100%;
+    outline: none;
+
+}
+
+.valores-fixos {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+
+}
+
+.valores-fixos button {
+    padding: 12px 0;
+    background-color: white;
+    border: none;
+    border-radius: 12px;
+    font-size: 16px;
+    transform: scale(1.02);
+    box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.15);
+}
+
+.formulario {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    max-width: 550px;
+    margin: 0 auto;
+
+}
+
+.coluna {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    flex: 1;
+    min-width: 200px;
+
+}
+
+.base {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    width: 100%;
+    margin-top: 20px;
+
+}
+
+textarea {
+    flex: 1;
+    height: 100px;
+    margin-right: 10px;
+
+}
+
+input,
+textarea,
+button {
+    border-radius: 50px;
+    border: 1px solid #ccc;
+    padding: 12px 20px;
+    font-size: 16px;
+    transform: scale(1.02);
+    box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.15);
+}
+
+button {
+    height: 40px;
+    padding: 0 20px;
+    background-color: #FFBF0C;
+    border: none;
+    border-radius: 20px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* SECTION RODAPÉ */
+
+.texto-rodape {
+    margin-top: 30px;
+    font-size: 14px;
+    color: #555;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.compartilhar {
+    text-align: center;
+    margin: 40px 0 20px;
+}
+
+.botao-compartilhar {
+    background-color: #8338EA;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 30px;
+    font-size: 16px;
+    cursor: pointer;
+    transform: scale(1.02);
+    box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.15);
+}
+
+.compartilhar p {
+    margin-top: 10px;
+    color: #555;
+    font-size: 14px;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    background-color: #8338EA;
+    color: white;
+    padding: 30px 60px;
+    font-family: "poppins";
+
+}
+
+.footer-col {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.logo-social {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+}
+
+.logo {
+    height: 134px;
+    width: 330px;
+    margin-top: 0px;
+}
+
+.social p {
+    display: flex;
+    align-items: center;
+    font-size: 22px;
+    margin: 5px 0;
+
+}
+
+.icon {
+    width: 20px;
+    margin-right: 8px;
+}
+
+
+
+.links p {
+    font-size: 17px;
+    margin: 5px 0;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 8px;
+    text-align: left;
+    width: 300px;
+    padding-left: 60px;
+}
+
+.footer a {
+    color: white;
+    text-decoration: none;
+}
+
+.endereco {
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    font-size: 22px;
+
+}
+
+.icon-local {
+    width: 50px;
+    margin-bottom: 10px;
+    align-items: baseline;
+}
+
+.endereco p {
+    font-size: 16px;
+    margin: 4px 0;
+}
+
+/* --- */
+/* PÁGINA PROJETOS */
+/* --- */
+
+.projetos {
+    background: url('/src/assets/images/BG-projetos.jpg') no-repeat top center;
+    background-size: 100vw 37rem;
+    /* exibe o background do topo da página na classe especifica do body da página de projetos apenas  */
 }
