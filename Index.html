@@ -9,96 +9,112 @@
 </head>
 
 <body class="hero-inicio">
-    <img class="logo" src="/src/assets/images/GuardiõesLogo.png"
-        alt="Icone em formato de escudo com uma borda preta por fora, seguido por uma borda amarela interna, com duas crianças, uma menina de cabelo curto e vestido vermelho, e um garoto de cabelo curto e camiseta azul, levantando os braços e segurando a mão um da outro, com dois sorrisos nos rostos">
     <header>
-        <div class="container">
-            <img src="src/assets/images/GuardiõesTitulo.png" height="164" width="430.61" class="logo">
-            <nav>
-                <ul>
-                    <li><a href="#">Sobre nós</a></li>
-                    <li><a href="#">Nos Contate!</a></li>
-                    <li><a href="#">Projetos</a></li>
-                    <li><a href="#" class="botão">Quero Ajudar</a></li>
-                </ul>
-            </nav>
-        </div>
+        <img src="src/assets/images/GuardiõesTitulo.png" class="logo-titulo">
+        <nav>
+            <a href="Sobre_nós.html">Sobre nós</a>
+            <a href="#">Nos Contate!</a>
+            <a href="Projetos.html">Projetos</a>
+        </nav>
+        <button>Quero ajudar!</button>
     </header>
-    <main>
-        <div class="texto-principal">
-            <h1> Será que custa tão caro <span class="bold-roxo">mudar</span> uma <span
-                    class="bold-vermelho">vida?</span>
-            </h1>
-            <p>Num mundo onde tantas crianças sofrem com a escassez e a miséria, poderiamos <span
-                    class="semibold">juntos</span>, com
-                pequenas quantias, <span class="semibold">mudar de verdade</span> a realidade delas?</p>
-        </div>
+
+    <main class="texto-principal">
+        <h1> Será que custa tão caro mudar uma vida? </h1>
+        <p>Em um mundo onde tantas crianças sofrem sem comida, casa, brinquedos, remédios, sem conseguirem VIVER a
+            infância que merecem ter, poderiamos,<span class="semibold"> juntos</span>, com pequenas quantias, <span
+                class="semibold">mudar de
+                verdade a realidade
+                delas?</span></p>
     </main>
 
     <section class="Gente-como-vc">
-        <h2>Gente como <span>você</span></h2>
-        <p>
-            A ONG <span class="roxo-letras">Guardiões da Infância</span> existe desde 2017, formada por um grupo de
-            pessoas comuns que não ganham muito com seus empregos, mas(!) que decidiram fazer o possível para
-            <span class="roxo-letras">realizarem um sonho:</span> dar as crianças uma <span class="semibold"> vida
-                decente.</span>
-        </p>
-        <button class="semibold">Já quero ajudar</button>
+        <img class="logo" src="/src/assets/images/Guardiões_Logo.png"
+            alt="Icone em formato de escudo com uma borda preta por fora, seguido por uma borda amarela interna, com duas crianças, uma menina de cabelo curto e vestido vermelho, e um garoto de cabelo curto e camiseta azul, levantando os braços e segurando a mão um da outro, com dois sorrisos nos rostos">
+        <aside class="texto-gente">
+            <h2>Gente como <span class="bold-roxo">você</span></h2>
+            <p>
+                Nós somos a ONG “Guardiões da Infância”, mas além disso, somos pessoas comuns, com contas para pagar e
+                famílias para sustentar. Cada um de nós com sua própria origem e história, mas todos olhando para o
+                mundo e vendo como ele É, e também, como <span class="roxo-letras">pode ser.</span>
+            </p>
+            <p>
+                Estamos aqui porque compaixão, afeto e boas condições
+                não devem ser algo que damos apenas para nossos filhos.
+            </p>
+            <p class="semibold" id="vida-decente">Todos merecem a chance de viver uma vida decente</p>
+            <button class="semibold">Já quero ajudar</button>
+        </aside>
     </section>
 
-    <img class="onda-roxa" src="src/assets/images/Onda-roxa.jpg" alt="Uma onda irregular roxa, separando a página">
+    <!-- <img class="onda-roxa" src="src/assets/images/Onda-roxa.jpg" alt="Uma onda irregular roxa, separando a página"> -->
 
-    <section class="iniciativas">
+    <section class="historias" id="historias-inicio">
+        <h2>Conheça as Histórias <span class="bold-vermelho"> Delas</span></h2>
+        <p>
+            Alguns de nossos feitos que refletem a realidade de várias crianças pelo Brasil. Veja que o que mostramos
+            <span class="semibold">não são</span> apenas promessas vazias, <br>
+            <span class="semibold">são o nosso compromisso.</span>
+        </p>
+
+        <div class="cards-historias">
+            <div class="card-covid">
+                <img src="src/assets/images/menino-feliz.jpg"
+                    alt="Um garoto junto de sua familia ao fundo sorridentes sob a luz do sol dentro de sua casa">
+                <div class="card-hist-descrição">
+                    <p>Juntos em Pernambuco Contra a Covid-19</p>
+                    <div class="card-rodape">
+                        <p class="data">10 Jan 2020</p>
+                        <a href="Projetos.html#historias-projetos">Saiba mais</a>
+                    </div>
+                </div>
+            </div>
+            <div class="card-brinquedos">
+                <img src="src/assets/images/crianças-alegres.jpg"
+                    alt="Um grupo de crianças alegres gesticulando com as mãos e com roupas e acessórios coloridos">
+                <div class="card-hist-descrição">
+                    <p>Juntos em Pernambuco Contra a Covid-19</p>
+                    <div class="card-rodape">
+                        <p class="data">12 Mar 2022</p>
+                        <a href="Projetos.html#historias-projetos">Saiba mais</a>
+                    </div>
+                </div>
+            </div>
+            <div class="card-natalino">
+                <img src="src/assets/images/natalino.jpg"
+                    alt="Um garoto ajoelhado no chão de uma sala decorada com uma árvore de natal, um tapete cinza e outras decorações, vestido com um gorro de natal e segurando um presente em suas mãos">
+                <div class="card-hist-descrição">
+                    <p>Juntos em Pernambuco Contra a Covid-19</p>
+                    <div class="card-rodape">
+                        <p class="data">25 Dez 2024</p>
+                        <a href="Projetos.html#historias-projetos">Saiba mais</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <button class="semibold">Duvida? Confira mais ➜</button>
+    </section>
+
+    <!-- <img class="onda-vermelha" src="src/assets/images/Onda-vermelha.jpg"
+        alt="Uma onda irregular vermelha separando a página"> -->
+
+    <section class="iniciativas" id="iniciativas-inicio">
         <h2><span class="bold-azul">Iniciativas</span> em Andamento</h2>
 
         <p class="inic-paragrafo1">Quando várias pessoas doam pequenas quantias, É SIM possível criar um <span
                 class="semibold">impacto
-                real</span> na vida de <span class="semibold">centenas de crianças.</span>
-            Veja através do que já fizemos, <span class="semibold">juntos:</span>
+                real</span> na vida de <span class="semibold">centenas de crianças.</span> <br> Veja através do que já
+            fizemos, <span class="semibold">juntos:</span>
         </p>
-
-        <!--         <p class="inic-paragrafo2">Veja através do que já fizemos, <span class="semibold">juntos:</span></p> -->
-
-        <section class="historias">
-            <h1>Conheça as Histórias <span style="color: #FE006F;"> Delas</span></h1>
-            <p>
-                <br>Alguns de nossos feitos que refletem a realidade de várias crianças pelo Brasil.<br>
-                Veja que o que mostramos <strong>não são</strong> apenas promessas vazias,
-                <br><strong>são o nosso compromisso.</strong>
-            </p>
-
-            <div class="cartoes">
-                <div class="cartao">
-                    <img src="images/Criança1.jpg" alt="Imagem 1">
-                    <h3>Juntos em Pernambuco Contra a Covid-19</h3>
-                    <p class="data">10 Jan 2020</p>
-                    <a href="#">Saiba mais</a>
-                </div>
-
-                <div class="cartao">
-                    <img src="images/Crianças2.jpg" alt="Imagem 2">
-                    <h3>Semana dos Brinquedos no Interior de São Paulo</h3>
-                    <p class="data">12 Mar 2022</p>
-                    <a href="#">Saiba mais</a>
-                </div>
-
-                <div class="cartao">
-                    <img src="images/CriançaNatal.jpg" alt="Imagem 3">
-                    <h3>Projeto Espírito Natalino 2024: festas no Rio de Janeiro</h3>
-                    <p class="data">25 Dez 2024</p>
-                    <a href="#">Saiba mais</a>
-                </div>
-            </div>
-
-            <button class="catalogo">Duvidas? Confira mais ➜</button>
-        </section>
 
         <div class="cards-iniciativas">
 
             <div class="card-feirão">
                 <img src="src/assets/images/feira-frutas.jpg"
                     alt="uma caixa de papelão com alimentos diversificados, como beringelas, pães, grãos, frutas e legumes">
-                <div class="card-descrição">
+                <div class="card-inic-descrição">
                     <div class="progress-bar">
                         <div class="progress">71,6%</div>
                     </div>
@@ -106,12 +122,12 @@
                     <div class="card-quantias">
                         <div class="quantia-arrecadada">
                             <p>Arrecadados</p>
-                            <strong>R$2150</strong>
+                            <p class="semibold">R$2150</p>
                         </div>
 
                         <div class="quantia-meta">
                             <p>Nossa Meta</p>
-                            <strong>R$3000</strong>
+                            <p class="semibold">R$3000</p>
                         </div>
                     </div>
                 </div>
@@ -119,7 +135,7 @@
 
             <div class="card-roupas">
                 <img src="src/assets/images/doação-roupas.jpg" alt="">
-                <div class="card-descrição">
+                <div class="card-inic-descrição">
                     <div class="progress-bar">
                         <div class="progress">22%</div>
                     </div>
@@ -127,12 +143,12 @@
                     <div class="card-quantias">
                         <div class="quantia-arrecadada">
                             <p>Arrecadadas</p>
-                            <strong>33 peças</strong>
+                            <p class="semibold">33 peças</p>
                         </div>
 
                         <div class="quantia-meta">
                             <p>Nossa Meta</p>
-                            <strong>150 peças</strong>
+                            <p class="semibold">150 peças</p>
                         </div>
                     </div>
                 </div>
@@ -141,7 +157,7 @@
             <div class="card-maternidade">
                 <img src="src/assets/images/bebe_brinquedo.jpg"
                     alt="um bebê uma fralda branca sentado de costas ao lado de um urso de pelúcia com uma fralda branca e com o braço esquerdo abraçando o bebê, ambos em cima de tapete branco">
-                <div class="card-descrição">
+                <div class="card-inic-descrição">
                     <div class="progress-bar">
                         <div class="progress">62,9%</div>
                     </div>
@@ -149,58 +165,56 @@
                     <div class="card-quantias">
                         <div class="quantia-arrecadada">
                             <p>Arrecadados</p>
-                            <strong>R$629</strong>
+                            <p class="semibold">R$629</p>
                         </div>
 
                         <div class="quantia-meta">
                             <p>Nossa Meta</p>
-                            <strong>R$999</strong>
+                            <p class="semibold">R$999</p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <button class="semibold">confira mais iniciativas</button>
+        <button class="semibold">confira mais iniciativas ➜</button>
     </section>
 
-    <section class="doacao">
-        <h1>Doar pouco é <span style="color: #FFBF0C">ajudar muito</span></h1>
+    <section class="doacao" id="doaçao-inicio">
+        <h2>Doar pouco é <span class="bold-amarelo">ajudar muito</span></h2>
 
-
-
-        <section class="doacao-container">
-
-            <h2 class="titulo">Quanto você gostaria de doar?</h2>
-
-            <div class="cartao-doacao">
-
+        <div class="doacao-container">
+            <h2 class="titulo-quantia">Quanto você gostaria de doar?</h2>
+            <div class="doacao-container2">
                 <div class="lado-esquerdo">
                     <div class="campo-valor">
                         <span>R$</span>
                         <input type="text" value="0,00">
                     </div>
                     <div class="valores-fixos" id="valorDoacao">
-                        <button>R$1,00</button>
-                        <button>R$5,00</button>
-                        <button>R$10,00</button>
-                        <button>R$15,00</button>
-                        <button>R$30,00</button>
-                        <button>R$50,00</button>
+                        <div class="valores-esquerda">
+                            <button>R$1,00</button>
+                            <button>R$10,00</button>
+                            <button>R$30,00</button>
+                        </div>
+                        <div class="valores-direita">
+                            <button>R$5,00</button>
+                            <button>R$15,00</button>
+                            <button>R$50,00</button>
+                        </div>
                     </div>
                 </div>
 
                 <script src="doacao.js"></script>
 
-
                 <div class="formulario">
-                    <div class="coluna">
+                    <div class="coluna-esquerda">
                         <input type="text" placeholder="Nome e Sobrenome">
-                        <input type="tel" placeholder="Telefone">
+                        <input type="email" placeholder="Email">
                     </div>
 
-                    <div class="coluna">
+                    <div class="coluna-direita">
                         <input type="text" placeholder="Idade">
-                        <input type="email" placeholder="Email">
+                        <input type="tel" placeholder="Telefone">
                     </div>
 
                     <div class="base">
@@ -209,50 +223,61 @@
                         <button type="submit">Doar</button>
                     </div>
                 </div>
-        </section>
+            </div>
 
-        <section>
-            <p class="texto-rodape">
-                <br> Nós entendemos e respeitamos a decisão daqueles que não puderem ou não quiserem doar.
-                <br>Por isso, somos gratos a todos que possam ao menos compartilhar com conhecidos, amigos e familiares
-                a nossa missão.
-                <br> <strong>toda ajuda é muito bem vinda!</strong>
-            </p>
-
-
-            <div class="compartilhar">
+            <div class="pós-doação">
+                <p>Nós entendemos e respeitamos a decisão daqueles que não puderem ou não quiserem doar.</p>
+                <p>Por isso, somos gratos a todos que possam ao menos compartilhar com conhecidos, amigos e
+                    familiares
+                    a nossa missão.</p>
+                <p class="semibold">Toda ajuda é muito bem vinda!</p>
                 <button class="botao-compartilhar">Compartilhar</button>
                 <p>Obrigado pela sua atenção.</p>
             </div>
-
-            <div class="footer">
-                <div class="footer-col logo-social">
-                    <img src="images/GItitulo.PNG" alt="Logo Guardiões da Infância" class="logo">
-                    <div class="social">
-                        <p><img src="images/phone_7849759.png" class="icon"> (11) 98765–4321</p>
-                        <p><img src="images/instagram_739244.png" class="icon"> @GuardioesdaInfancia</p>
-                        <p><img src="images/facebook_1077041.png" class="icon"> @GuardioesdaInfancia</p>
-                        <p><img src="images/twitter_1077032.png" class="icon"> @GuardiõesdaInfancia</p>
+            <footer>
+                <div class="contacts">
+                    <img src="src/assets/images/GuardiõesTitulo.png" alt="Logo Guardiões da Infância"
+                        class="logo-footer">
+                    <div class="contacts-list">
+                        <div class="Telefone">
+                            <img src="src/assets/images/telefone.svg" class="ícone">
+                            <p>(11) 98765–4321</p>
+                        </div>
+                        <div class="Instagram">
+                            <img src="src/assets/images/Instagram.svg" class="ícone">
+                            <p>@GuardioesdaInfancia</p>
+                        </div>
+                        <div class="Youtube">
+                            <img src="src/assets/images/Youtube.svg" class="ícone">
+                            <p>@GuardioesdaInfancia</p>
+                        </div>
+                        <div class="Facebook">
+                            <img src="src/assets/images/Facebook.svg" class="ícone">
+                            <p>@GuardioesdaInfancia</p>
+                        </div>
+                        <div class="Twitter">
+                            <img src="src/assets/images/Twitter.svg" class="ícone">
+                            <p>@GuardioesdaInfancia</p>
+                        </div>
                     </div>
                 </div>
 
-                <div class="footer-col links">
-                    <p><a a href="#">Sobre nós</a></p>
-                    <p><a a href="#">Catálogo de Histórias</a></p>
-                    <p><a a href="#"> Iniciativas</a></p>
-                    <p><a a href="#">Transparência de Gastos</a></p>
-                    <p><a a href="#">Nossa Equipe</a></p>
-                    <p><a a href="#">Como se Voluntariar?</a></p>
-                </div>
+                <nav>
+                    <a a href="#">Sobre nós</a>
+                    <a a href="#">Catálogo de Histórias</a>
+                    <a a href="#">Iniciativas</a>
+                    <a a href="#">Transparência de Gastos</a>
+                    <a a href="#">Nossa Equipe</a>
+                    <a a href="#">Como se Voluntariar?</a>
+                </nav>
 
-                <div class="footer-col endereco">
-                    <img src="images/location_535239.png" alt="ícone local" class="icon-local">
-                    <p><strong>SP:</strong> Rua Capivaras Alegres, 309</p>
-                    <p><strong>RJ:</strong> Rua Sapopemba da Misericórdia, 245</p>
-                    <p><strong>PE:</strong> Rua Matuto Sapertino, 178</p>
+                <div class="endereços">
+                    <img src="src/assets/images/Local.svg" alt="ícone de localização">
+                    <p><span class="semibold">SP:</span> Rua Capivaras Alegres, 309</p>
+                    <p><span class="semibold">SC:</span> Rua Sapopemba da Misericórdia, 245</p>
+                    <p><span class="semibold">PE:</span> Rua Matuto Sapertino, 178</p>
                 </div>
-            </div>
-        </section>
+            </footer>
 </body>
 
 </html>
