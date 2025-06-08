@@ -21,10 +21,9 @@
 
     <main class="texto-principal">
         <h1> Será que custa tão caro mudar uma vida? </h1>
-        <p>Em um mundo onde tantas crianças sofrem sem comida, casa, brinquedos, remédios, sem conseguirem VIVER a
-            infância que merecem ter, poderiamos,<span class="semibold"> juntos</span>, com pequenas quantias, <span
-                class="semibold">mudar de
-                verdade a realidade
+        <p>Em um mundo onde tantas crianças sofrem sem comida, casa, brinquedos, remédios, sem conseguirem viver uma
+            infância <span class="semibold">digna</span>, poderiamos<span class="semibold"> juntos</span>, com pequenas
+            quantias, <span class="semibold">mudar a realidade
                 delas?</span></p>
     </main>
 
@@ -43,7 +42,7 @@
                 não devem ser algo que damos apenas para nossos filhos.
             </p>
             <p class="semibold" id="vida-decente">Todos merecem a chance de viver uma vida decente</p>
-            <button class="semibold">Já quero ajudar</button>
+            <button class="semibold">Como posso ajudar?</button>
         </aside>
     </section>
 
@@ -73,7 +72,7 @@
                 <img src="src/assets/images/crianças-alegres.jpg"
                     alt="Um grupo de crianças alegres gesticulando com as mãos e com roupas e acessórios coloridos">
                 <div class="card-hist-descrição">
-                    <p>Juntos em Pernambuco Contra a Covid-19</p>
+                    <p>Semana dos Brinquedos no Interior de São Paulo</p>
                     <div class="card-rodape">
                         <p class="data">12 Mar 2022</p>
                         <a href="Projetos.html#historias-projetos">Saiba mais</a>
@@ -84,7 +83,7 @@
                 <img src="src/assets/images/natalino.jpg"
                     alt="Um garoto ajoelhado no chão de uma sala decorada com uma árvore de natal, um tapete cinza e outras decorações, vestido com um gorro de natal e segurando um presente em suas mãos">
                 <div class="card-hist-descrição">
-                    <p>Juntos em Pernambuco Contra a Covid-19</p>
+                    <p>Projeto Espirito Natalino 2024: festas no RJ</p>
                     <div class="card-rodape">
                         <p class="data">25 Dez 2024</p>
                         <a href="Projetos.html#historias-projetos">Saiba mais</a>
@@ -183,12 +182,12 @@
         <h2>Doar pouco é <span class="bold-amarelo">ajudar muito</span></h2>
 
         <div class="doacao-container">
-            <h2 class="titulo-quantia">Quanto você gostaria de doar?</h2>
+            <h3 class="titulo-quantia">Quanto você gostaria de doar?</h3>
             <div class="doacao-container2">
                 <div class="lado-esquerdo">
                     <div class="campo-valor">
-                        <span>R$</span>
-                        <input type="text" value="0,00">
+                        <span class="semibold">R$</span>
+                        <input type="number" value="0.00" id="valor-doacao">
                     </div>
                     <div class="valores-fixos" id="valorDoacao">
                         <div class="valores-esquerda">
@@ -207,77 +206,88 @@
                 <script src="doacao.js"></script>
 
                 <div class="formulario">
-                    <div class="coluna-esquerda">
-                        <input type="text" placeholder="Nome e Sobrenome">
-                        <input type="email" placeholder="Email">
-                    </div>
+                    <p>Quem está doando?</p>
+                    <div class="form-colunas">
+                        <div class="coluna-esquerda">
+                            <input type="name" placeholder="Nome e Sobrenome" id="nome">
+                            <input type="email" placeholder="Email" id="email">
+                        </div>
 
-                    <div class="coluna-direita">
-                        <input type="text" placeholder="Idade">
-                        <input type="tel" placeholder="Telefone">
+                        <div class="coluna-direita">
+                            <input type="number" placeholder="Idade" id="idade">
+                            <input type="tel" placeholder="Tel: (11)..." id="telefone">
+                        </div>
                     </div>
-
-                    <div class="base">
+                    <div class="form-base">
                         <textarea
                             placeholder="Comentários adicionais: como você quer que sua doação seja usada? Com qual iniciativa quer contribuir?"></textarea>
-                        <button type="submit">Doar</button>
+                        <button type="submit" class="semibold">Doar</button>
                     </div>
                 </div>
             </div>
+        </div>
+    </section>
 
-            <div class="pós-doação">
-                <p>Nós entendemos e respeitamos a decisão daqueles que não puderem ou não quiserem doar.</p>
-                <p>Por isso, somos gratos a todos que possam ao menos compartilhar com conhecidos, amigos e
-                    familiares
-                    a nossa missão.</p>
-                <p class="semibold">Toda ajuda é muito bem vinda!</p>
-                <button class="botao-compartilhar">Compartilhar</button>
-                <p>Obrigado pela sua atenção.</p>
-            </div>
-            <footer>
-                <div class="contacts">
-                    <img src="src/assets/images/GuardiõesTitulo.png" alt="Logo Guardiões da Infância"
-                        class="logo-footer">
-                    <div class="contacts-list">
-                        <div class="Telefone">
-                            <img src="src/assets/images/telefone.svg" class="ícone">
-                            <p>(11) 98765–4321</p>
-                        </div>
-                        <div class="Instagram">
-                            <img src="src/assets/images/Instagram.svg" class="ícone">
-                            <p>@GuardioesdaInfancia</p>
-                        </div>
-                        <div class="Youtube">
-                            <img src="src/assets/images/Youtube.svg" class="ícone">
-                            <p>@GuardioesdaInfancia</p>
-                        </div>
-                        <div class="Facebook">
-                            <img src="src/assets/images/Facebook.svg" class="ícone">
-                            <p>@GuardioesdaInfancia</p>
-                        </div>
-                        <div class="Twitter">
-                            <img src="src/assets/images/Twitter.svg" class="ícone">
-                            <p>@GuardioesdaInfancia</p>
-                        </div>
+    <div class="pos-doacao">
+        <p>Nós entendemos e respeitamos a decisão daqueles que não puderem ou não quiserem doar.</p>
+        <p>Por isso, somos gratos a todos que possam ao menos compartilhar com conhecidos, amigos e
+            familiares
+            a nossa missão.</p>
+        <p class="semibold">Toda ajuda é muito bem vinda!</p>
+        <button class="botao-compartilhar">Compartilhar</button>
+        <p>Obrigado pela sua atenção.</p>
+    </div>
+    <footer>
+        <div class="footer-row1">
+            <div class="contacts">
+                <p class="titulo-footer">Nos contate</p>
+                <div class="contacts-list">
+                    <div class="Telefone">
+                        <img src="src/assets/images/telefone.svg" class="ícone">
+                        <p>(11) 98765–4321</p>
+                    </div>
+                    <div class="Instagram">
+                        <img src="src/assets/images/Instagram.svg" class="ícone">
+                        <p>@GuardioesdaInfancia</p>
+                    </div>
+                    <div class="Youtube">
+                        <img src="src/assets/images/Youtube.svg" class="ícone">
+                        <p>@GuardioesdaInfancia</p>
+                    </div>
+                    <div class="Facebook">
+                        <img src="src/assets/images/Facebook.svg" class="ícone">
+                        <p>@GuardioesdaInfancia</p>
+                    </div>
+                    <div class="Twitter">
+                        <img src="src/assets/images/Twitter.svg" class="ícone">
+                        <p>@GuardioesdaInfancia</p>
                     </div>
                 </div>
-
+            </div>
+            <div class="footer-saiba">
+                <p class="titulo-footer">Saiba mais</p>
                 <nav>
                     <a a href="#">Sobre nós</a>
                     <a a href="#">Catálogo de Histórias</a>
                     <a a href="#">Iniciativas</a>
-                    <a a href="#">Transparência de Gastos</a>
                     <a a href="#">Nossa Equipe</a>
                     <a a href="#">Como se Voluntariar?</a>
                 </nav>
+            </div>
 
-                <div class="endereços">
-                    <img src="src/assets/images/Local.svg" alt="ícone de localização">
-                    <p><span class="semibold">SP:</span> Rua Capivaras Alegres, 309</p>
-                    <p><span class="semibold">SC:</span> Rua Sapopemba da Misericórdia, 245</p>
-                    <p><span class="semibold">PE:</span> Rua Matuto Sapertino, 178</p>
-                </div>
-            </footer>
+            <div class="endereços">
+                <p class="titulo-footer">Onde nos encontrar?</p>
+                <img src="src/assets/images/Local.svg" alt="ícone de localização">
+                <p><span class="semibold">SP:</span> Rua Capivaras Alegres, 309</p>
+                <p><span class="semibold">SC:</span> Rua Sapopemba da Misericórdia, 245</p>
+                <p><span class="semibold">PE:</span> Rua Matuto Sapertino, 178</p>
+            </div>
+        </div>
+        <div class="footer-row2">
+            <img src="src/assets/images/GuardiõesTitulo.png" alt="Logo Guardiões da Infância" class="logo-footer">
+            <p>© 2019–2025 Guardiões da Infância. Todos os direitos reservados.</p>
+        </div>
+    </footer>
 </body>
 
 </html>

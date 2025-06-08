@@ -11,6 +11,8 @@
     border-color: none;
     font-family: "Poppins", sans-serif;
     list-style: none;
+    /* outline: 1px solid red; */
+    /* -> medida de teste de layout */
 }
 
 :root {
@@ -18,12 +20,12 @@
     --white-color: #FFFFFF;
     --black-color: #000000;
     --black-shadow: rgba(0, 0, 0, 0.7);
-    --gray-color-text: #c8c8c8;
+    --gray-color-text: #d9d9d9;
     --link-color: #FFFFFF;
-    --link-hover: #efc8ff;
+    --link-hover: #FFBF0C;
     --purple: #8338EA;
     --blue: #3A86FE;
-    --yellow: #FFBF0C;
+    --yellow: #f5c000;
     --red: #FF368E;
     font-size: clamp(0.2rem, 1vw, 1.2rem);
 }
@@ -33,7 +35,6 @@
 .bold-roxo {
     color: var(--purple);
     font-weight: bold;
-    bo: 4px 6px rgba(255, 255, 255, 0.15);
 }
 
 .bold-vermelho {
@@ -61,7 +62,6 @@
 }
 
 
-
 /* --- */
 /* PÁGINA INÍCIO / LANDING PAGE */
 /* --- */
@@ -70,8 +70,9 @@
 
 .hero-inicio {
     background: linear-gradient(0deg, #8338EA, #FF368E)no-repeat top center;
-    background-size: 100vw 53rem;
+    background-size: 100% 53rem;
     /* exibe o background do topo da página na classe especifica do body da landing page apenas */
+    /* overflow-x: hidden; */
 }
 
 /* url('/src/assets/images/BG-inicio.png') no-repeat top center; */
@@ -80,7 +81,7 @@
 
 header {
     height: auto;
-    width: 100vw;
+    width: 100%;
     margin: 2rem 7rem 0 0;
     display: flex;
     flex-flow: nowrap row;
@@ -90,14 +91,15 @@ header {
 }
 
 .logo-titulo {
+    margin: 0 4rem;
     width: auto;
-    height: 9rem;
-    /* transition: transform 0.25s ease-in-out; */
+    height: 8rem;
+    transition: 0.3s;
 }
 
-/* .logo-titulo:hover {
-      transform: translateY(-5px) scale(1.05); 
-} */
+.logo-titulo:hover {
+    transform: translateY(-5px) scale(1.15);
+}
 
 header nav {
     font-size: 3rem;
@@ -130,29 +132,24 @@ header button {
     color: var(--white-color);
     border-radius: 9999px;
     padding: 1rem 3rem;
+    margin: 0 4rem;
+    margin: 0 3rem;
     font-size: 3rem;
     font-weight: 600;
-    /* box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.15); */
+    box-shadow: 0 4px 8px 0 rgba(234, 164, 0, 0.4);
+    transition: 0.3s;
 }
 
-@media {}
+header button:hover {
+    box-shadow: 0 8px 16px 0 rgba(234, 164, 0, 0.4);
+    transform: translateY(-5px) scale(1.05);
+}
 
-/* MAIN */
+/* HERO */
 /* Deinições de tamanhos, posições e layout geral */
 
-/* main {
-    display: flex;
-    flex-flow: nowrap column-reverse;
-    align-items: center;
-    width: 100vw;
-    height: auto;
-    gap: 3rem;
-    padding: 0 2vw;
-    color: var(--white-color);
-}
- */
 .texto-principal {
-    width: 100vw;
+    width: 100%;
     height: auto;
     display: flex;
     flex-flow: nowrap column;
@@ -169,7 +166,14 @@ header button {
     font-size: 7rem;
     line-height: 1.4;
     width: 20ch;
+    transition: 0.3s;
+
 }
+
+.texto-principal h1:hover {
+    transform: translateY(-5px) scale(1.05);
+}
+
 
 .texto-principal p {
     text-align: center;
@@ -189,19 +193,19 @@ header button {
     align-items: center;
     justify-content: center;
     gap: 9rem;
-    margin: 7rem 0;
+    margin: 9rem 0;
 }
 
 .logo {
-    width: 100%;
+    width: 50%;
     max-width: 1200px;
     height: auto;
+    transition: 0.3s;
 }
 
-/* .logo:hover {
+.logo:hover {
     transform: translateY(-5px) scale(1.05);
 }
- */
 
 .texto-gente {
     display: flex;
@@ -210,42 +214,39 @@ header button {
 }
 
 .Gente-como-vc h2 {
-    /* text-align: center; */
     font-weight: bold;
     font-size: 6rem;
     line-height: 1.4;
 }
 
 .Gente-como-vc p {
-    /* text-align: center; */
     font-size: 2.4rem;
     line-height: 1.7;
-    max-width: 60ch;
+    max-width: 58ch;
 }
 
 #vida-decente {
-    /* text-align: center; */
     font-size: 3rem;
     line-height: 1.7;
     max-width: 60ch;
 }
 
 .Gente-como-vc button {
-    width: 32rem;
+    width: 50%;
+    margin-top: 2rem;
     background-color: var(--purple);
     color: var(--white-color);
     font-size: 2.8rem;
-    padding: 1.5rem 4rem;
+    padding: 1.5rem 3.5rem;
     border-radius: 9999px;
     cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 0px 4px 8px 0 rgba(102, 0, 197, 0.4);
 }
 
-/* Onda roxa divisória */
-
-.onda-roxa {
-    width: 100vw;
-    height: auto;
-    margin: 9rem 0;
+.Gente-como-vc button:hover {
+    box-shadow: 4px 8px 16px 0 rgba(102, 0, 197, 0.4);
+    transform: translateY(-8px) scale(1.15);
 }
 
 /*  SECTION HISTÓRIAS */
@@ -255,6 +256,7 @@ header button {
     flex-flow: nowrap column;
     justify-content: center;
     align-items: center;
+    margin: 9rem 0;
 }
 
 .historias h2 {
@@ -336,9 +338,6 @@ header button {
     padding: 6px 18px;
     border-radius: 9999px;
     transition: 0.3s;
-    /* display: inline-block;
-    text-align: right;
-    margin-bottom: 10px; */
 }
 
 .cards-historias a:hover {
@@ -363,7 +362,7 @@ header button {
 }
 
 .onda-vermelha {
-    width: 100vw;
+    width: 100%;
     height: auto;
     margin: 9rem 0;
 }
@@ -377,7 +376,7 @@ header button {
     align-items: center;
     width: 100%;
     height: auto;
-    margin-top: 4rem;
+    margin: 9rem 0;
     gap: 3rem;
 }
 
@@ -530,14 +529,14 @@ header button {
 
 /* SECTION DOAÇÃO - FORMULÁRIO */
 
-/* .doacao {
+.doacao {
     display: flex;
     flex-flow: nowrap column;
     justify-content: center;
     align-items: center;
     width: 100%;
     height: auto;
-    margin-top: 4rem;
+    margin: 4rem 0;
     gap: 3rem;
 }
 
@@ -545,127 +544,262 @@ header button {
     font-size: 6rem;
 }
 
+.doacao-container h3 {
+    font-size: 3rem;
+}
+
 .titulo-quantia {
-    font-size: 4rem;
-    margin-bottom: 2rem;
+    font-size: 3rem;
+    text-align: center;
+}
+
+.doacao-container {
+    max-width: 90%;
+    height: auto;
+    border: 10px solid var(--yellow);
+    border-radius: 80px;
+    padding: 2rem;
+    display: flex;
+    flex-flow: nowrap column;
+    gap: 3rem;
 }
 
 .doacao-container2 {
-    border: 10px solid var(--yellow);
-    margin:
-    padding: 20px;
     display: flex;
-    justify-content: space-between;
-    gap: 40px;
-    flex-wrap: wrap;
-    border-radius: 50px;
+    flex-flow: nowrap row;
+    gap: 5%;
 }
 
-
 .lado-esquerdo {
-    flex: 1;
-    min-width: 300px;
+    display: flex;
+    flex-flow: nowrap column;
+    width: 30%;
+    height: auto;
+    gap: 2.5rem;
 }
 
 .campo-valor {
     display: flex;
     align-items: center;
-    background-color: var(--white-color);
-    border-radius: 12px;
-    padding: 12px 18px;
-    margin-bottom: 25px;
-    font-size: 18px;
+    justify-content: space-between;
+    padding: 1rem 0;
+    font-size: 3rem;
+    width: 100%;
+    box-shadow: 0 4px 8px 0 rgba(113, 89, 0, 0.3);
+    border-radius: 20px;
 }
 
 .campo-valor span {
-    margin-right: 10px;
-    font-weight: bold;
-
+    margin-left: 1rem;
 }
 
-.campo-valor input {
-    border: none;
-    background: transparent;
-    font-size: 18px;
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+input[id="valor-doacao"] {
+    font-size: 3rem;
+    text-align: right;
     width: 100%;
+    margin-right: 25px;
     outline: none;
+    border-radius: inherit;
 }
 
 .valores-fixos {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 15px;
+    display: flex;
+    flex-flow: nowrap row;
+    gap: 5%;
+}
 
+.valores-esquerda {
+    display: flex;
+    flex-flow: nowrap column;
+    width: 50%;
+    gap: 2.5rem;
+}
+
+.valores-direita {
+    display: flex;
+    flex-flow: nowrap column;
+    width: 50%;
+    gap: 2.5rem;
 }
 
 .valores-fixos button {
     padding: 12px 0;
-    background-color: var(--bg-color);
-    border: none;
-    border-radius: 12px;
-    font-size: 16px;
-    transform: scale(1.02);
-    box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.15);
+    font-size: 2rem;
+}
+
+.doacao-container2 input:not(#valor-doacao),
+.doacao-container2 button:not(button[type="submit"]),
+.doacao-container2 textarea {
+    padding: 1rem 2rem;
+    box-shadow: 0 4px 8px 0 rgba(113, 89, 0, 0.3);
+    border-radius: 20px;
+    outline: none;
+    background-color: var(--white-color);
 }
 
 .formulario {
     display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    max-width: 550px;
-    margin: 0 auto;
-
-}
-
-.coluna {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    flex: 1;
-    min-width: 200px;
-}
-
-.base {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-    width: 100%;
-    margin-top: 20px;
-
-}
-
-textarea {
-    flex: 1;
-    height: 100px;
-    margin-right: 10px;
-
-}
- */
-
-/* Section Pós Formulário Doação */
-
-/* Rodapé */
-
-footer {
-    width: 100vw;
+    flex-flow: nowrap column;
+    width: 70%;
     height: auto;
-    padding: 5rem;
+}
+
+.formulario p {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.form-colunas {
     display: flex;
     flex-flow: nowrap row;
+    gap: 5%;
+}
+
+.coluna-esquerda {
+    display: flex;
+    flex-flow: nowrap column;
+    width: 70%;
+    gap: 1.5rem;
+}
+
+.coluna-direita {
+    display: flex;
+    flex-flow: nowrap column;
+    width: 30%;
+    gap: 1.5rem;
+}
+
+input[id="nome"] {
+    font-size: 1.8rem;
+    text-align: center;
+}
+
+input[id="idade"] {
+    font-size: 1.8rem;
+    text-align: center;
+}
+
+input[id="email"] {
+    font-size: 1.8rem;
+    text-align: center;
+}
+
+input[id="telefone"] {
+    font-size: 1.8rem;
+    text-align: center;
+}
+
+.form-base {
+    display: flex;
+    flex-flow: nowrap row;
+    width: 100%;
+    margin-top: 1.5rem;
+    gap: 5%;
+}
+
+.form-base textarea {
+    font-size: 1.8rem;
+    text-align: center;
+    line-height: 1.6;
+    width: 65%;
+    overflow: hidden;
+    resize: none;
+    min-height: 230px;
+}
+
+.form-base button[type="submit"] {
+    background-color: var(--yellow);
+    color: var(--white-color);
+    font-size: 3rem;
+    padding: 1rem 6rem;
+    border-radius: 60px;
+    cursor: pointer;
+    margin-top: auto;
+    transition: 0.3s;
+    box-shadow: 0 4px 8px 0 rgba(234, 164, 0, 0.4);
+}
+
+.form-base button[type="submit"]:hover {
+    box-shadow: 0 8px 16px 0 rgba(234, 164, 0, 0.4);
+    transform: translateY(-5px) scale(1.05);
+}
+
+/* SECTION PÓS FORMULÁRIO - COMPARTILHE */
+
+.pos-doacao {
+    display: flex;
+    flex-flow: nowrap column;
+    align-items: center;
+    gap: 3rem;
+    margin: 5rem 0;
+}
+
+.pos-doacao p {
+    font-size: 2rem;
+    text-align: center;
+    width: 60ch;
+}
+
+.pos-doacao .botao-compartilhar {
+    background-color: var(--white);
+    color: var(--purple);
+    border: 1px solid var(--purple);
+    font-size: 2rem;
+    font-weight: 500;
+    padding: 1rem 3em;
+    border-radius: 9999px;
+    margin: 1.5rem 0;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.pos-doacao .botao-compartilhar:hover {
+    background-color: var(--purple);
+    color: var(--white-color);
+    box-shadow: 4px 8px 16px 0 rgba(102, 0, 197, 0.4);
+    transform: translateY(-5px) scale(1.05);
+}
+
+/* RODAPÉ */
+
+footer {
+    width: 100%;
+    height: auto;
+    padding: 5rem 5rem 2rem 5rem;
+    gap: 4rem;
+    display: flex;
+    flex-flow: nowrap column;
     justify-content: space-between;
     align-items: center;
     background-color: var(--purple);
     color: var(--white-color);
     font-size: 2rem;
     font-weight: 450;
-    /* gap: 4rem; */
 }
+
+.footer-row1 {
+    width: 100%;
+    display: flex;
+    flex-flow: nowrap row;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.titulo-footer {
+    font-size: 3.5rem;
+}
+
 
 .contacts {
     display: flex;
     flex-flow: nowrap column;
     justify-content: space-around;
-    align-items: center;
+    align-items: flex-start;
     gap: 3rem;
 }
 
@@ -673,13 +807,12 @@ footer {
     display: flex;
     flex-flow: nowrap column;
     justify-content: center;
-    gap: 2rem;
+    gap: 3.3rem;
 }
 
 .contacts .ícone {
     height: 1.5em;
     /* Escala com o tamanho do texto */
-    width: auto;
 }
 
 .Telefone {
@@ -687,225 +820,82 @@ footer {
     flex-flow: nowrap row;
     align-items: center;
     gap: 0.5rem;
-    /* Base responsiva */
 }
 
 .Instagram {
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    /* Base responsiva */
 }
 
 .Youtube {
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    /* Base responsiva */
 }
 
 .Facebook {
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    /* Base responsiva */
 }
 
 .Twitter {
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    /* Base responsiva */
 }
 
 .Twitter .ícone {
     height: 1.1em;
-    /* Escala com o tamanho do texto */
+    /* em para esclaar conforme a fonte do texto */
     width: auto;
 }
 
-.logo-footer {
-    width: 100%;
-    max-width: 550px;
-    height: auto;
+.footer-saiba {
+    display: flex;
+    flex-flow: nowrap column;
+    justify-content: center;
+    gap: 2.7rem;
+    transform: translateX(145px);
 }
 
 footer nav {
     display: flex;
     flex-flow: nowrap column;
     justify-content: center;
-    gap: 2.7rem;
-    padding-left: 10rem;
+    gap: 3.3rem;
 }
+
 
 .endereços {
     display: flex;
     flex-flow: nowrap column;
     justify-content: center;
-    align-items: center;
+    align-items: flex-end;
     gap: 3rem;
 }
 
 .endereços img {
     width: 100%;
-    max-width: 250px;
+    max-width: 200px;
     height: auto;
-    margin-bottom: 2.5rem;
 }
 
-/* input,
-textarea,
-button {
-    border-radius: 50px;
-    border: 1px solid var(--gray-color-text);
-    padding: 12px 20px;
-    font-size: 16px;
-    transform: scale(1.02);
-    box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.15);
-}
-
-button {
-    height: 40px;
-    padding: 0 20px;
-    background-color: var(--yellow);
-    border: none;
-    border-radius: 20px;
-    font-weight: bold;
-    cursor: pointer;
-} */
-
-/* SECTION RODAPÉ */
-
-/* .texto-rodape {
-    margin-top: 30px;
-    font-size: 14px;
-    color: var(--black-color);
-    max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
-}
-
-.compartilhar {
-    text-align: center;
-    margin: 40px 0 20px;
-}
-
-.botao-compartilhar {
-    background-color: var(--purple);
-    color: var(--white-color);
-    border: none;
-    border-radius: 20px;
-    padding: 10px 30px;
-    font-size: 16px;
-    cursor: pointer;
-    transform: scale(1.02);
-    box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.15);
-}
-
-.compartilhar p {
-    margin-top: 10px;
-    color: var(--gray-color-text);
-    font-size: 14px;
-}
-
-.footer {
+.footer-row2 {
     display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    background-color: var(--purple);
-    color: var(--white-color);
-    padding: 30px 60px;
-}
-
-.footer-col {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-.logo-social {
-    align-items: flex-start;
-    display: flex;
-    flex-direction: column;
-}
-
-.logo {
-    height: 134px;
-    width: 330px;
-    margin-top: 0px;
-}
-
-.social p {
-    display: flex;
-    align-items: center;
-    font-size: 22px;
-    margin: 5px 0;
-}
-
-.icon {
-    width: 20px;
-    margin-right: 8px;
-}
-
-.links p {
-    font-size: 17px;
-    margin: 5px 0;
-    display: flex;
-    align-items: flex-start;
-    flex-direction: column;
     justify-content: center;
-    gap: 10px;
-    margin-bottom: 8px;
-    text-align: left;
-    width: 300px;
-    padding-left: 60px;
-}
-
-.footer a {
-    color: var(--white-color);
-    text-decoration: none;
-}
-
-.endereco {
-    text-align: center;
     align-items: center;
-    justify-content: center;
-    display: flex;
-    flex-direction: column;
-    font-size: 22px;
+    gap: 2rem;
 }
 
-.icon-local {
-    width: 50px;
-    margin-bottom: 10px;
-    align-items: baseline;
+.logo-footer {
+    width: 100%;
+    max-width: 450px;
+    height: auto;
+    transition: 0.3s;
 }
 
-.endereco p {
-    font-size: 16px;
-    margin: 4px 0;
-} */
-
-/* --- */
-/* PÁGINA PROJETOS */
-/* --- */
-
-.projetos {
-    background: url('/src/assets/images/BG-projetos.jpg') no-repeat top center;
-    background-size: 100vw auto;
-    /* exibe o background do topo da página na classe especifica do body da página de projetos apenas  */
+.logo-footer:hover {
+    transform: translateY(-5px) scale(1.15);
 }
-
-
-
-/* --- */
-/* PÁGINA SOBRE-NÓS */
-/* --- */
-
-.sobre-nós {
-    background: linear-gradient(0deg, #8338EA, #FF368E)no-repeat top center;
-    background-size: 100vw 53rem;
-}
-
-.sobre-nós main {}
