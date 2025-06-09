@@ -68,14 +68,10 @@
 
 /* Banner no background do Body */
 
-.hero-inicio {
+body {
     background: linear-gradient(0deg, #8338EA, #FF368E)no-repeat top center;
     background-size: 100% 53rem;
-    /* exibe o background do topo da página na classe especifica do body da landing page apenas */
-    /* overflow-x: hidden; */
 }
-
-/* url('/src/assets/images/BG-inicio.png') no-repeat top center; */
 
 /* CABEÇALHO  */
 
@@ -167,7 +163,7 @@ header button:hover {
     line-height: 1.4;
     width: 20ch;
     transition: 0.3s;
-
+    text-shadow: 12px 12px 0px rgba(157, 0, 255, 0.7);
 }
 
 .texto-principal h1:hover {
@@ -181,6 +177,7 @@ header button:hover {
     line-height: 1.7;
     max-width: 70ch;
     margin-bottom: 3rem;
+    text-shadow: 4px 4px 42px rgba(255, 255, 255, 0.7);
 }
 
 /* SECTION GENTE-COMO-VOCÊ */
@@ -193,7 +190,7 @@ header button:hover {
     align-items: center;
     justify-content: center;
     gap: 9rem;
-    margin: 9rem 0;
+    margin: 9rem 3rem;
 }
 
 .logo {
@@ -257,11 +254,12 @@ header button:hover {
     justify-content: center;
     align-items: center;
     margin: 9rem 0;
+    gap: 3rem;
 }
 
 .historias h2 {
     font-size: 6rem;
-    margin-bottom: 3rem;
+    margin-bottom: 1rem;
 }
 
 .historias p {
@@ -281,7 +279,10 @@ header button:hover {
 
 .card-covid,
 .card-brinquedos,
-.card-natalino {
+.card-natalino,
+.card-comidas,
+.card-avião,
+.card-bebe {
     width: clamp(200px, 40rem, 40rem);
     margin: 4rem;
     box-shadow: 0 4px 8px 0 rgba(187, 0, 81, 0.4);
@@ -292,7 +293,10 @@ header button:hover {
 
 .card-covid:hover,
 .card-brinquedos:hover,
-.card-natalino:hover {
+.card-natalino:hover,
+.card-comidas:hover,
+.card-avião:hover,
+.card-bebe:hover {
     box-shadow: 0 8px 20px 0 rgba(187, 0, 81, 0.4);
     transform: translateY(-5px) scale(1.05);
 }
@@ -353,18 +357,13 @@ header button:hover {
     border-radius: 9999px;
     margin: 3rem 0;
     cursor: pointer;
+    box-shadow: 0 4px 8px 0 rgba(187, 0, 81, 0.4);
     transition: 0.3s;
 }
 
 .historias button:hover {
     box-shadow: 0 8px 20px 0 rgba(187, 0, 81, 0.4);
     transform: translateY(-5px) scale(1.05);
-}
-
-.onda-vermelha {
-    width: 100%;
-    height: auto;
-    margin: 9rem 0;
 }
 
 /* SECTION INICIATIVAS */
@@ -627,11 +626,6 @@ input[id="valor-doacao"] {
     gap: 2.5rem;
 }
 
-.valores-fixos button {
-    padding: 12px 0;
-    font-size: 2rem;
-}
-
 .doacao-container2 input:not(#valor-doacao),
 .doacao-container2 button:not(button[type="submit"]),
 .doacao-container2 textarea {
@@ -640,6 +634,26 @@ input[id="valor-doacao"] {
     border-radius: 20px;
     outline: none;
     background-color: var(--white-color);
+}
+
+.valores-fixos button {
+    padding: 12px 0;
+    font-size: 2rem;
+    transition: all 0.2s ease;
+}
+
+.valores-fixos button:hover {
+    background-color: #ffdb80;
+    color: var(--black-color);
+}
+
+.valores-fixos button.ativo {
+    background-color: var(--yellow);
+    color: var(--yellow);
+    border: 1px solid var(--yellow);
+    border-color: var(--yellow);
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
 .formulario {
@@ -745,20 +759,20 @@ input[id="telefone"] {
     width: 60ch;
 }
 
-.pos-doacao .botao-compartilhar {
+.botao-compartilhar {
     background-color: var(--white);
     color: var(--purple);
     border: 1px solid var(--purple);
     font-size: 2rem;
     font-weight: 500;
-    padding: 1rem 3em;
+    padding: 1rem 4rem;
     border-radius: 9999px;
     margin: 1.5rem 0;
     cursor: pointer;
     transition: 0.3s;
 }
 
-.pos-doacao .botao-compartilhar:hover {
+.botao-compartilhar:hover {
     background-color: var(--purple);
     color: var(--white-color);
     box-shadow: 4px 8px 16px 0 rgba(102, 0, 197, 0.4);
@@ -793,7 +807,6 @@ footer {
 .titulo-footer {
     font-size: 3.5rem;
 }
-
 
 .contacts {
     display: flex;
@@ -848,7 +861,6 @@ footer {
 
 .Twitter .ícone {
     height: 1.1em;
-    /* em para esclaar conforme a fonte do texto */
     width: auto;
 }
 

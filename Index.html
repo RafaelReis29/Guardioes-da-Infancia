@@ -8,13 +8,13 @@
     <link rel="stylesheet" href="/src/style/root.css">
 </head>
 
-<body class="hero-inicio">
+<body>
     <header>
         <img src="src/assets/images/GuardiõesTitulo.png" class="logo-titulo">
         <nav>
-            <a href="Sobre_nós.html">Sobre nós</a>
-            <a href="#">Nos Contate!</a>
-            <a href="Projetos.html">Projetos</a>
+            <a href="#gente-como-vc">Sobre nós</a>
+            <a href="#footer">Nos Contate!</a>
+            <a href="#iniciativas">Projetos</a>
         </nav>
         <button>Quero ajudar!</button>
     </header>
@@ -27,7 +27,7 @@
                 delas?</span></p>
     </main>
 
-    <section class="Gente-como-vc">
+    <section class="Gente-como-vc" id="Gente-como-vc">
         <img class="logo" src="/src/assets/images/Guardiões_Logo.png"
             alt="Icone em formato de escudo com uma borda preta por fora, seguido por uma borda amarela interna, com duas crianças, uma menina de cabelo curto e vestido vermelho, e um garoto de cabelo curto e camiseta azul, levantando os braços e segurando a mão um da outro, com dois sorrisos nos rostos">
         <aside class="texto-gente">
@@ -46,9 +46,7 @@
         </aside>
     </section>
 
-    <!-- <img class="onda-roxa" src="src/assets/images/Onda-roxa.jpg" alt="Uma onda irregular roxa, separando a página"> -->
-
-    <section class="historias" id="historias-inicio">
+    <section class="historias" id="historias">
         <h2>Conheça as Histórias <span class="bold-vermelho"> Delas</span></h2>
         <p>
             Alguns de nossos feitos que refletem a realidade de várias crianças pelo Brasil. Veja que o que mostramos
@@ -64,7 +62,7 @@
                     <p>Juntos em Pernambuco Contra a Covid-19</p>
                     <div class="card-rodape">
                         <p class="data">10 Jan 2020</p>
-                        <a href="Projetos.html#historias-projetos">Saiba mais</a>
+                        <a href="">Saiba mais</a>
                     </div>
                 </div>
             </div>
@@ -75,7 +73,7 @@
                     <p>Semana dos Brinquedos no Interior de São Paulo</p>
                     <div class="card-rodape">
                         <p class="data">12 Mar 2022</p>
-                        <a href="Projetos.html#historias-projetos">Saiba mais</a>
+                        <a href="">Saiba mais</a>
                     </div>
                 </div>
             </div>
@@ -86,20 +84,49 @@
                     <p>Projeto Espirito Natalino 2024: festas no RJ</p>
                     <div class="card-rodape">
                         <p class="data">25 Dez 2024</p>
-                        <a href="Projetos.html#historias-projetos">Saiba mais</a>
+                        <a href="">Saiba mais</a>
                     </div>
                 </div>
             </div>
-
+            <div class="card-comidas">
+                <img src="src/assets/images/fila-frutas.jpg"
+                    alt="Um garoto ajoelhado no chão de uma sala decorada com uma árvore de natal, um tapete cinza e outras decorações, vestido com um gorro de natal e segurando um presente em suas mãos">
+                <div class="card-hist-descrição">
+                    <p>Feira de distribuição de comidas no Rio de Janeiro</p>
+                    <div class="card-rodape">
+                        <p class="data">17 Ago 2021</p>
+                        <a href="">Saiba mais</a>
+                    </div>
+                </div>
+            </div>
+            <div class="card-avião">
+                <img src="src/assets/images/avião.jpg"
+                    alt="Um garoto ajoelhado no chão de uma sala decorada com uma árvore de natal, um tapete cinza e outras decorações, vestido com um gorro de natal e segurando um presente em suas mãos">
+                <div class="card-hist-descrição">
+                    <p>Tesouros da nossa infância: doe seus velhos brinquedos</p>
+                    <div class="card-rodape">
+                        <p class="data">28 Nov 2022</p>
+                        <a href="">Saiba mais</a>
+                    </div>
+                </div>
+            </div>
+            <div class="card-bebe">
+                <img src="src/assets/images/bebe-roupa.jpg"
+                    alt="Um garoto ajoelhado no chão de uma sala decorada com uma árvore de natal, um tapete cinza e outras decorações, vestido com um gorro de natal e segurando um presente em suas mãos">
+                <div class="card-hist-descrição">
+                    <p>Agasalhos para os recém-nascidos se aquecerem</p>
+                    <div class="card-rodape">
+                        <p class="data">24 Mai 2023</p>
+                        <a href="">Saiba mais</a>
+                    </div>
+                </div>
+            </div>
         </div>
 
         <button class="semibold">Duvida? Confira mais ➜</button>
     </section>
 
-    <!-- <img class="onda-vermelha" src="src/assets/images/Onda-vermelha.jpg"
-        alt="Uma onda irregular vermelha separando a página"> -->
-
-    <section class="iniciativas" id="iniciativas-inicio">
+    <section class="iniciativas" id="iniciativas">
         <h2><span class="bold-azul">Iniciativas</span> em Andamento</h2>
 
         <p class="inic-paragrafo1">Quando várias pessoas doam pequenas quantias, É SIM possível criar um <span
@@ -178,7 +205,7 @@
         <button class="semibold">confira mais iniciativas ➜</button>
     </section>
 
-    <section class="doacao" id="doaçao-inicio">
+    <section class="doacao" id="doacao">
         <h2>Doar pouco é <span class="bold-amarelo">ajudar muito</span></h2>
 
         <div class="doacao-container">
@@ -191,19 +218,17 @@
                     </div>
                     <div class="valores-fixos" id="valorDoacao">
                         <div class="valores-esquerda">
-                            <button>R$1,00</button>
-                            <button>R$10,00</button>
-                            <button>R$30,00</button>
+                            <button data-valor="1.00">R$1,00</button>
+                            <button data-valor="10.00">R$10,00</button>
+                            <button data-valor="30.00">R$30,00</button>
                         </div>
                         <div class="valores-direita">
-                            <button>R$5,00</button>
-                            <button>R$15,00</button>
-                            <button>R$50,00</button>
+                            <button data-valor="5.00">R$5,00</button>
+                            <button data-valor="15.00">R$15,00</button>
+                            <button data-valor="50.00">R$50,00</button>
                         </div>
                     </div>
                 </div>
-
-                <script src="doacao.js"></script>
 
                 <div class="formulario">
                     <p>Quem está doando?</p>
@@ -234,10 +259,10 @@
             familiares
             a nossa missão.</p>
         <p class="semibold">Toda ajuda é muito bem vinda!</p>
-        <button class="botao-compartilhar">Compartilhar</button>
+        <button class="botao-compartilhar" onclick="copyShareLink()">Compartilhar</button>
         <p>Obrigado pela sua atenção.</p>
     </div>
-    <footer>
+    <footer id="footer">
         <div class="footer-row1">
             <div class="contacts">
                 <p class="titulo-footer">Nos contate</p>
@@ -288,6 +313,33 @@
             <p>© 2019–2025 Guardiões da Infância. Todos os direitos reservados.</p>
         </div>
     </footer>
+
+    <script>
+        const botoes = document.querySelectorAll('#valorDoacao button');
+        const inputValor = document.getElementById('valor-doacao');
+
+        botoes.forEach(botao => {
+            botao.addEventListener('click', () => {
+                const valor = botao.getAttribute('data-valor');
+                inputValor.value = valor;
+
+                // Remove classe 'ativo' de todos os botões
+                botoes.forEach(b => b.classList.remove('ativo'));
+
+                // Adiciona classe 'ativo' ao botão clicado
+                botao.classList.add('ativo');
+            });
+        });
+
+        function copyShareLink() {
+            const url = window.location.href;
+            navigator.clipboard.writeText(url).then(() => {
+                alert('Link do website copiado para área de transferência. Espalhe agora a nossa missão!');
+            }).catch(err => {
+                console.error('Falha ao copiar o link:', err);
+            });
+        }
+    </script>
 </body>
 
 </html>
