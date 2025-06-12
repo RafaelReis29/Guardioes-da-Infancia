@@ -271,6 +271,22 @@ header a:active {
 
 .cards-historias {
     display: flex;
+    flex-flow: wrap column;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+}
+
+.card-row1 {
+    display: flex;
+    flex-flow: wrap row;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+}
+
+.card-row2 {
+    display: flex;
     flex-flow: wrap row;
     justify-content: center;
     width: 100%;
