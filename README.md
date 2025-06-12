@@ -1,6 +1,6 @@
 # ONG (fictícia) 'Guardiões da Infância'
 
-Um website para compartilhar com usuários a causa de uma ONG com foco em ajudar crianças e suas famílias, e convencer o público a contribuir com tal causa. 
+Um website para compartilhar com usuários a causa de uma ONG com foco em ajudar crianças e suas famílias, e convencer o público a contribuir com essa causa. 
 
 ---
 
@@ -17,7 +17,7 @@ Um website para compartilhar com usuários a causa de uma ONG com foco em ajudar
 
 O website representa a face digital da ONG Guardiões da Infância, uma instituição dedicada a proteger, nutrir e inspirar crianças em situação de vulnerabilidade social, por meio da distribuição de suprimentos (alimentos, roupas, brinquedos, material escolar) e da criação de experiências alegres que valorizem a infância.
 
-Indo além de apoio material e alimentício, a ONG busca restaurar a dignidade emocional da criança, reforçando sentimentos de acolhimento, pertencimento e esperança, fazendo com que o site refleta esse compromisso com a leveza da infância, sem ignorar o peso real da missão.
+Indo além de apoio material e alimentício, a ONG busca restaurar a dignidade emocional da criança, reforçando sentimentos de acolhimento, pertencimento e esperança, fazendo com que o site reflita esse compromisso com a leveza da infância, sem ignorar o peso real da missão.
 
 O público alvo do projeto são adultos com indepedência financeira, com ou sem filhos, que tenham apreço pelas crianças e simpatia pela dor das milhares que sofrem mundo à fora. 
 Portanto, a ideia de sucesso do site é conseguir convencer este público a doar alguma quantia, contribuindo financeiramente com a missão da Ong sem comprometer seus gastos e despesas cotidianas, ou, caso não possa doar, que possa ao menos compartilhar com conhecidos e espalhar a causa. 
