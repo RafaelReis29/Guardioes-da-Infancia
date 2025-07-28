@@ -19,7 +19,7 @@ O website representa a face digital da ONG Guardiões da Infância, uma institui
 
 Indo além de apoio material e alimentício, a ONG busca restaurar a dignidade emocional da criança, reforçando sentimentos de acolhimento, pertencimento e esperança, fazendo com que o site reflita esse compromisso com a leveza da infância, sem ignorar o peso real da missão.
 
-O público alvo do projeto são adultos com indepedência financeira, com ou sem filhos, que tenham apreço pelas crianças e simpatia pela dor das milhares que sofrem mundo à fora. 
+O público alvo do projeto são adultos com indepedência financeira, com ou sem filhos, que tenham apreço pelas crianças e simpatia pela dor das milhares que sofrem mundo afora. 
 Portanto, a ideia de sucesso do site é conseguir convencer este público a doar alguma quantia, contribuindo financeiramente com a missão da Ong sem comprometer seus gastos e despesas cotidianas, ou, caso não possa doar, que possa ao menos compartilhar com conhecidos e espalhar a causa. 
 
 ---
