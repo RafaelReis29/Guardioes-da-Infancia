@@ -817,7 +817,6 @@ footer {
     display: flex;
     flex-flow: nowrap row;
     justify-content: space-between;
-    align-items: flex-start;
 }
 
 .titulo-footer {
@@ -828,7 +827,6 @@ footer {
     display: flex;
     flex-flow: nowrap column;
     justify-content: space-around;
-    align-items: flex-start;
     gap: 3rem;
 }
 
@@ -885,7 +883,7 @@ footer {
     flex-flow: nowrap column;
     justify-content: center;
     gap: 2.7rem;
-    transform: translateX(145px);
+    transform: translateX(120px);
 }
 
 footer nav {
@@ -893,10 +891,6 @@ footer nav {
     flex-flow: nowrap column;
     justify-content: center;
     gap: 3.3rem;
-}
-
-footer a {
-    margin: 0 2rem;
 }
 
 footer a {
