@@ -3,64 +3,97 @@
 /* Configurações globais para redefinição da aparência do html */
 
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    text-decoration: none;
-    border: none;
-    border-color: none;
-    font-family: "Poppins", sans-serif;
-    list-style: none;
-    /* outline: 1px solid red; */
-    /* -> medida de teste de layout */
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  border: none;
+  border-color: none;
+  font-family: 'Poppins', sans-serif;
+  list-style: none;
+  /* outline: 1px solid red; */
+  /* -> medida de teste de layout */
 }
 
 :root {
-    --bg-color: #FFFFFF;
-    --white-color: #FFFFFF;
-    --black-color: #000000;
-    --black-shadow: rgba(0, 0, 0, 0.7);
-    --gray-color-text: #d9d9d9;
-    --link-color: #FFFFFF;
-    --link-hover: #FFBF0C;
-    --purple: #8338EA;
-    --blue: #3A86FE;
-    --yellow: #f5c000;
-    --red: #FF368E;
-    font-size: clamp(0.2rem, 1vw, 1.2rem);
+  --bg-color: #ffffff;
+  --white-color: #ffffff;
+  --black-color: #111827;
+  --black-shadow: rgba(0, 0, 0, 0.7);
+  --gray-color-text: #d9d9d9;
+  --link-color: #ffffff;
+  --link-hover: #ffbf0c;
+  --purple: #8338ea;
+  --blue: #3a86fe;
+  --yellow: #f5c000;
+  --red: #ff368e;
+  --transition-default: 0.3s;
+  --pill-radius: 9999px;
+  font-size: 16px;
+}
+
+html,
+body {
+  width: 100%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--bg-color);
+  background-image: linear-gradient(0deg, #8338ea, #ff368e);
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: 100% clamp(34rem, 58vw, 48rem);
+  color: var(--black-color);
+  line-height: 1.6;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
 }
 
 /* Estilização das fontes das páginas e definição de seus spans */
 
 .bold-roxo {
-    color: var(--purple);
-    font-weight: bold;
+  color: var(--purple);
+  font-weight: bold;
 }
 
 .bold-vermelho {
-    color: var(--red);
-    font-weight: bold;
+  color: var(--red);
+  font-weight: bold;
 }
 
 .bold-azul {
-    color: var(--blue);
-    font-weight: bold;
+  color: var(--blue);
+  font-weight: bold;
 }
 
 .bold-amarelo {
-    color: var(--yellow);
-    font-weight: bold;
+  color: var(--yellow);
+  font-weight: bold;
 }
 
 .semibold {
-    font-weight: 600
+  font-weight: 600;
 }
 
 .roxo-letras {
-    color: var(--purple);
-    font-weight: 600;
+  color: var(--purple);
+  font-weight: 600;
 }
-
 
 /* --- */
 /* PÁGINA INÍCIO / LANDING PAGE */
@@ -68,873 +101,947 @@
 
 /* Banner no background do Body */
 
-body {
-    background: linear-gradient(0deg, #8338EA, #FF368E)no-repeat top center;
-    background-size: 100% 53rem;
-}
-
 /* CABEÇALHO  */
 
 header {
-    height: auto;
-    width: 100%;
-    margin: 2rem 7rem 0 0;
-    display: flex;
-    flex-flow: nowrap row;
-    align-items: center;
-    justify-content: space-between;
-    background: none;
+  width: min(100%, 1440px);
+  margin: 0 auto;
+  padding: 1.5rem clamp(1rem, 4vw, 4rem) 0;
+  display: flex;
+  flex-flow: nowrap row;
+  align-items: center;
+  justify-content: space-between;
+  gap: clamp(1rem, 3vw, 2.5rem);
+  background: none;
 }
 
 .logo-titulo {
-    margin: 0 4rem;
-    width: auto;
-    height: 8rem;
-    transition: 0.3s;
+  width: auto;
+  max-width: clamp(12rem, 22vw, 22rem);
+  max-height: clamp(4rem, 7vw, 7rem);
+  height: auto;
+  object-fit: contain;
+  flex-shrink: 0;
+  display: block;
+  transition: var(--transition-default);
 }
 
 .logo-titulo:hover {
-    transform: translateY(-5px) scale(1.15);
+  transform: translateY(-4px) scale(1.03);
 }
 
 header nav {
-    font-size: 3rem;
-    font-weight: 600;
-    display: flex;
-    flex-flow: nowrap row;
-    gap: 2rem;
+  font-size: clamp(0.95rem, 1.75vw, 2rem);
+  font-weight: 600;
+  display: flex;
+  flex-flow: nowrap row;
+  justify-content: center;
+  gap: clamp(0.75rem, 2vw, 2rem);
+  min-width: 0;
 }
 
 header a {
-    margin: 0 2rem;
-}
-
-header a {
-    color: var(--link-color);
-    text-decoration: none;
+  color: var(--link-color);
+  text-decoration: none;
+  white-space: nowrap;
 }
 
 header a:visited {
-    color: var(--link-color);
+  color: var(--link-color);
 }
 
 header a:hover,
 header a:active {
-    color: var(--link-hover)
+  color: var(--link-hover);
 }
 
-#botão-ajuda {
-    background-color: var(--yellow);
-    color: var(--white-color);
-    border-radius: 9999px;
-    padding: 1rem 3rem;
-    margin: 0 4rem;
-    margin: 0 3rem;
-    font-size: 3rem;
-    font-weight: 600;
-    box-shadow: 0 4px 8px 0 rgba(234, 164, 0, 0.4);
-    transition: 0.3s;
+#botao-ajuda {
+  color: var(--white-color);
+  border-radius: var(--pill-radius);
+  border: 2px solid var(--white-color);
+  background-color: var(--blue);
+  padding: 0.75rem clamp(1rem, 2.4vw, 2rem);
+  font-size: clamp(0.95rem, 1.75vw, 2rem);
+  font-weight: 600;
+  box-shadow: 0 4px 8px 0 rgba(0, 144, 234, 0.4);
+  transition: var(--transition-default);
+  flex-shrink: 0;
 }
 
-#botão-ajuda:hover {
-    box-shadow: 0 8px 16px 0 rgba(234, 164, 0, 0.4);
-    transform: translateY(-5px) scale(1.05);
+#botao-ajuda:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 109, 234, 0.4);
+  transform: translateY(-4px) scale(1.03);
 }
 
 /* HERO */
 /* Deinições de tamanhos, posições e layout geral */
 
 .texto-principal {
-    width: 100%;
-    height: auto;
-    display: flex;
-    flex-flow: nowrap column;
-    align-items: center;
-    justify-content: center;
-    gap: 3rem;
-    margin: 3rem 0;
-    color: var(--white-color);
+  width: min(100%, 1180px);
+  min-height: clamp(24rem, 52vw, 36rem);
+  display: flex;
+  flex-flow: nowrap column;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(1.25rem, 3vw, 2.25rem);
+  margin: 0 auto;
+  padding: clamp(2rem, 5vw, 4rem) clamp(1rem, 4vw, 3rem);
+  color: var(--white-color);
 }
 
 .texto-principal h1 {
-    text-align: center;
-    font-weight: bold;
-    font-size: 7rem;
-    line-height: 1.4;
-    width: 20ch;
-    transition: 0.3s;
-    text-shadow: 12px 12px 0px rgba(157, 0, 255, 0.7);
+  text-align: center;
+  font-weight: bold;
+  font-size: clamp(2.4rem, 5vw, 4.8rem);
+  line-height: 1.18;
+  max-width: 20ch;
+  transition: var(--transition-default);
+  text-shadow: 8px 8px 0 rgba(157, 0, 255, 0.55);
 }
 
 .texto-principal h1:hover {
-    transform: translateY(-5px) scale(1.05);
+  transform: translateY(-4px) scale(1.02);
 }
 
-
 .texto-principal p {
-    text-align: center;
-    font-size: 2.4rem;
-    line-height: 1.7;
-    max-width: 70ch;
-    margin-bottom: 3rem;
-    text-shadow: 4px 4px 42px rgba(255, 255, 255, 0.7);
+  text-align: center;
+  font-size: clamp(1rem, 1.55vw, 1.45rem);
+  line-height: 1.75;
+  max-width: 62ch;
+  text-shadow: 4px 4px 42px rgba(255, 255, 255, 0.7);
 }
 
 /* SECTION GENTE-COMO-VOCÊ */
 
 .Gente-como-vc {
-    height: auto;
-    width: auto;
-    display: flex;
-    flex-flow: nowrap row;
-    align-items: center;
-    justify-content: center;
-    gap: 9rem;
-    margin: 9rem 4rem;
+  width: min(100% - 2rem, 1180px);
+  display: flex;
+  flex-flow: nowrap row;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(2rem, 6vw, 5rem);
+  margin: clamp(4rem, 9vw, 7rem) auto;
 }
 
 .logo {
-    width: 50%;
-    max-width: 1200px;
-    height: auto;
-    transition: 0.3s;
+  width: min(42vw, 28rem);
+  max-width: 28rem;
+  max-height: 28rem;
+  height: auto;
+  object-fit: contain;
+  flex: 0 0 auto;
+  display: block;
+  transition: var(--transition-default);
 }
 
 .logo:hover {
-    transform: translateY(-5px) scale(1.05);
+  transform: translateY(-4px) scale(1.03);
 }
 
 .texto-gente {
-    display: flex;
-    flex-flow: nowrap column;
-    gap: 3rem;
+  display: flex;
+  flex-flow: nowrap column;
+  gap: clamp(1rem, 2.4vw, 1.75rem);
+  min-width: 0;
 }
 
 .Gente-como-vc h2 {
-    font-weight: bold;
-    font-size: 6rem;
-    line-height: 1.4;
+  font-weight: bold;
+  font-size: clamp(2rem, 4vw, 3.8rem);
+  line-height: 1.2;
 }
 
 .Gente-como-vc p {
-    font-size: 2.4rem;
-    line-height: 1.7;
-    max-width: 58ch;
+  font-size: clamp(1rem, 1.4vw, 1.35rem);
+  line-height: 1.75;
+  max-width: 58ch;
 }
 
 #vida-decente {
-    font-size: 3rem;
-    line-height: 1.7;
-    max-width: 60ch;
+  font-size: clamp(1.1rem, 1.75vw, 1.6rem);
+  line-height: 1.6;
+  max-width: 60ch;
 }
 
 .Gente-como-vc a {
-    max-width: 720px;
-    margin-top: 2rem;
-    background-color: var(--purple);
-    color: var(--white-color);
-    font-size: 2.8rem;
-    padding: 1.5rem 3.5rem;
-    border-radius: 9999px;
-    cursor: pointer;
-    transition: 0.3s;
-    box-shadow: 0px 4px 8px 0 rgba(102, 0, 197, 0.4);
+  width: fit-content;
+  max-width: 100%;
+  margin-top: 0.5rem;
+  background-color: var(--purple);
+  color: var(--white-color);
+  font-size: clamp(1rem, 1.45vw, 1.35rem);
+  padding: 0.85rem 1.75rem;
+  border-radius: var(--pill-radius);
+  cursor: pointer;
+  transition: var(--transition-default);
+  box-shadow: 0 4px 8px 0 rgba(102, 0, 197, 0.4);
 }
 
 .Gente-como-vc a:hover {
-    box-shadow: 4px 8px 16px 0 rgba(102, 0, 197, 0.4);
-    transform: translateY(-8px) scale(1.15);
+  box-shadow: 4px 8px 16px 0 rgba(102, 0, 197, 0.4);
+  transform: translateY(-4px) scale(1.03);
 }
 
 /*  SECTION HISTÓRIAS */
 
 .historias {
-    display: flex;
-    flex-flow: nowrap column;
-    justify-content: center;
-    align-items: center;
-    margin: 9rem 0;
-    gap: 3rem;
+  display: flex;
+  flex-flow: nowrap column;
+  justify-content: center;
+  align-items: center;
+  margin: clamp(4rem, 9vw, 7rem) auto;
+  gap: clamp(1.5rem, 3vw, 2.5rem);
+  padding: 0 1rem;
 }
 
 .historias h2 {
-    font-size: 6rem;
-    margin-bottom: 1rem;
+  font-size: clamp(2rem, 4vw, 3.8rem);
+  text-align: center;
+  line-height: 1.2;
+  margin-bottom: 0.25rem;
 }
 
-.historias p {
-    text-align: center;
-    font-size: 2.5rem;
-    line-height: 1.7;
-    max-width: 65ch;
+.historias > p {
+  text-align: center;
+  font-size: clamp(1rem, 1.4vw, 1.35rem);
+  line-height: 1.75;
+  max-width: 65ch;
 }
 
 .cards-historias {
-    display: flex;
-    flex-flow: wrap column;
-    justify-content: center;
-    width: 100%;
-    height: auto;
+  display: flex;
+  flex-flow: nowrap column;
+  justify-content: center;
+  width: min(100%, 1280px);
+  height: auto;
+  gap: clamp(1.5rem, 3vw, 2.5rem);
 }
 
-.card-row1 {
-    display: flex;
-    flex-flow: wrap row;
-    justify-content: center;
-    width: 100%;
-    height: auto;
-}
-
+.card-row1,
 .card-row2 {
-    display: flex;
-    flex-flow: wrap row;
-    justify-content: center;
-    width: 100%;
-    height: auto;
+  display: flex;
+  flex-flow: wrap row;
+  justify-content: center;
+  gap: clamp(1.25rem, 3vw, 2.5rem);
+  width: 100%;
+  height: auto;
 }
 
 .card-covid,
 .card-brinquedos,
 .card-natalino,
 .card-comidas,
-.card-avião,
+.card-aviao,
 .card-bebe {
-    width: clamp(200px, 40rem, 40rem);
-    margin: 4rem;
-    box-shadow: 0 4px 8px 0 rgba(187, 0, 81, 0.4);
-    font-size: clamp (0, 0, 4rem);
-    transition: 0.3s;
-    border-radius: 3rem;
+  width: min(100%, 22rem);
+  overflow: hidden;
+  box-shadow: 0 4px 8px 0 rgba(187, 0, 81, 0.4);
+  transition: var(--transition-default);
+  border-radius: 2rem;
+  background-color: var(--white-color);
 }
 
 .card-covid:hover,
 .card-brinquedos:hover,
 .card-natalino:hover,
 .card-comidas:hover,
-.card-avião:hover,
+.card-aviao:hover,
 .card-bebe:hover {
-    box-shadow: 0 8px 20px 0 rgba(187, 0, 81, 0.4);
-    transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 8px 20px 0 rgba(187, 0, 81, 0.4);
+  transform: translateY(-4px) scale(1.02);
 }
 
 .cards-historias img {
-    width: 100%;
-    height: auto;
-    border-radius: 3rem 3rem 0 0;
-    display: block;
+  width: 100%;
+  height: 14rem;
+  object-fit: cover;
+  border-radius: 2rem 2rem 0 0;
+  display: block;
 }
 
-.card-hist-descrição {
-    width: 100%;
-    padding: 1rem 2rem;
-    gap: 1.5rem;
-    display: flex;
-    flex-flow: nowrap column;
+.card-hist-descricao {
+  width: 100%;
+  padding: 1.25rem;
+  gap: 1rem;
+  display: flex;
+  flex-flow: nowrap column;
 }
 
-.card-hist-descrição p {
-    font-size: 2.5rem;
-    font-weight: 500;
-    text-align: start;
+.card-hist-descricao p {
+  font-size: clamp(1rem, 1.25vw, 1.18rem);
+  font-weight: 500;
+  text-align: start;
 }
 
 .card-rodape {
-    display: flex;
-    flex-flow: nowrap row;
-    align-items: center;
-    justify-content: space-between;
+  display: flex;
+  flex-flow: wrap row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
 }
 
 .card-rodape p {
-    font-size: 2.5rem;
-    font-weight: 500;
+  font-size: 0.95rem;
+  font-weight: 500;
 }
 
 .cards-historias a {
-    font-size: 2.2rem;
-    font-weight: 500;
-    color: var(--red);
-    border: 1px solid var(--red);
-    padding: 6px 18px;
-    border-radius: 9999px;
-    transition: 0.3s;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--red);
+  border: 1px solid var(--red);
+  padding: 0.35rem 0.85rem;
+  border-radius: var(--pill-radius);
+  transition: var(--transition-default);
 }
 
 .cards-historias a:hover {
-    background-color: var(--red);
-    color: var(--white-color);
+  background-color: var(--red);
+  color: var(--white-color);
 }
 
 .historias button {
-    background-color: var(--red);
-    color: var(--white-color);
-    font-size: 3rem;
-    padding: 1rem 3em;
-    border-radius: 9999px;
-    margin: 3rem 0;
-    cursor: pointer;
-    box-shadow: 0 4px 8px 0 rgba(187, 0, 81, 0.4);
-    transition: 0.3s;
+  background-color: var(--red);
+  color: var(--white-color);
+  font-size: clamp(1rem, 1.35vw, 1.25rem);
+  padding: 0.85rem clamp(1.5rem, 5vw, 3rem);
+  border-radius: var(--pill-radius);
+  margin: 1rem 0 0;
+  cursor: pointer;
+  box-shadow: 0 4px 8px 0 rgba(187, 0, 81, 0.4);
+  transition: var(--transition-default);
 }
 
 .historias button:hover {
-    box-shadow: 0 8px 20px 0 rgba(187, 0, 81, 0.4);
-    transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 8px 20px 0 rgba(187, 0, 81, 0.4);
+  transform: translateY(-4px) scale(1.03);
 }
 
 /* SECTION INICIATIVAS */
 
 .iniciativas {
-    display: flex;
-    flex-flow: nowrap column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: auto;
-    margin: 9rem 0;
-    gap: 3rem;
+  display: flex;
+  flex-flow: nowrap column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  margin: clamp(4rem, 9vw, 7rem) auto;
+  gap: clamp(1.5rem, 3vw, 2.5rem);
+  padding: 0 1rem;
 }
 
 .iniciativas h2 {
-    text-align: center;
-    font-weight: bold;
-    font-size: 6rem;
-    line-height: 1.4;
+  text-align: center;
+  font-weight: bold;
+  font-size: clamp(2rem, 4vw, 3.8rem);
+  line-height: 1.2;
 }
 
 .inic-paragrafo1 {
-    text-align: center;
-    font-size: 2.5rem;
-    line-height: 1.7;
-    max-width: 58ch;
+  text-align: center;
+  font-size: clamp(1rem, 1.4vw, 1.35rem);
+  line-height: 1.75;
+  max-width: 58ch;
 }
 
 .inic-paragrafo2 {
-    text-align: center;
-    font-size: 2.5rem;
-    line-height: 1.7;
-    max-width: 50ch;
+  text-align: center;
+  font-size: clamp(1rem, 1.4vw, 1.35rem);
+  line-height: 1.75;
+  max-width: 50ch;
 }
 
 .cards-iniciativas {
-    display: flex;
-    flex-flow: wrap row;
-    justify-content: center;
-    width: 100%;
-    height: auto;
+  display: flex;
+  flex-flow: wrap row;
+  justify-content: center;
+  gap: clamp(1.25rem, 3vw, 2.5rem);
+  width: min(100%, 1280px);
+  height: auto;
 }
 
-.card-feirão,
+.card-feirao,
 .card-roupas,
 .card-maternidade {
-    width: clamp(200px, 40rem, 40rem);
-    margin: 4rem;
-    font-size: clamp (0, 0, 4rem);
-    box-shadow: 0 4px 8px 0 rgba(0, 105, 234, 0.4);
-    transition: 0.3s;
-    border-radius: 3rem;
+  width: min(100%, 22rem);
+  overflow: hidden;
+  box-shadow: 0 4px 8px 0 rgba(0, 105, 234, 0.4);
+  transition: var(--transition-default);
+  border-radius: 2rem;
+  background-color: var(--white-color);
 }
 
-.card-feirão:hover,
+.card-feirao:hover,
 .card-roupas:hover,
 .card-maternidade:hover {
-    box-shadow: 0 8px 20px 0 rgba(0, 105, 234, 0.4);
-    transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 8px 20px 0 rgba(0, 105, 234, 0.4);
+  transform: translateY(-4px) scale(1.02);
 }
 
 .cards-iniciativas img {
-    width: 100%;
-    height: auto;
-    border-radius: 3rem 3rem 0 0;
+  width: 100%;
+  height: 14rem;
+  object-fit: cover;
+  border-radius: 2rem 2rem 0 0;
+  display: block;
 }
 
-.card-inic-descrição {
-    width: 100%;
-    padding: 1rem 2rem;
-    gap: 1.5rem;
-    display: flex;
-    flex-flow: nowrap column;
+.card-inic-descricao {
+  width: 100%;
+  padding: 1.25rem;
+  gap: 1rem;
+  display: flex;
+  flex-flow: nowrap column;
 }
 
-.card-inic-descrição p {
-    font-size: 2.5rem;
-    font-weight: 500;
+.card-inic-descricao p {
+  font-size: clamp(1rem, 1.25vw, 1.18rem);
+  font-weight: 500;
 }
 
 .card-quantias {
-    display: flex;
-    flex-flow: wrap row;
-    justify-content: space-between;
+  display: flex;
+  flex-flow: wrap row;
+  justify-content: space-between;
+  gap: 1rem;
 }
 
 .card-quantias p {
-    font-size: 2.2rem;
-    font-weight: 600;
-    color: var(--blue);
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--blue);
 }
 
 .card-quantias .semibold {
-    font-size: 2.5rem;
-    color: var(--black-color);
+  font-size: clamp(1rem, 1.25vw, 1.15rem);
+  color: var(--black-color);
 }
 
 .progress-bar {
-    width: 100%;
-    height: 3rem;
-    background-color: var(--gray-color-text);
-    border-radius: 3rem;
-    box-shadow: inset 0 4px 4px rgba(0, 105, 234, 0.4);
+  width: 100%;
+  height: 1.7rem;
+  background-color: var(--gray-color-text);
+  border-radius: 3rem;
+  box-shadow: inset 0 4px 4px rgba(0, 105, 234, 0.4);
+  overflow: hidden;
 }
 
-.card-feirão .progress {
-    width: 71.6%;
-    height: 3rem;
-    background-color: var(--blue);
-    color: var(--white-color);
-    border-radius: 3rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 2.7rem;
-    font-weight: 500;
+.progress {
+  height: 100%;
+  background-color: var(--blue);
+  color: var(--white-color);
+  border-radius: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.card-feirao .progress {
+  width: 71.6%;
 }
 
 .card-roupas .progress {
-    width: 22%;
-    height: 3rem;
-    background-color: var(--blue);
-    color: var(--white-color);
-    border-radius: 3rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 2.7rem;
-    font-weight: 500;
+  width: 22%;
 }
 
 .card-maternidade .progress {
-    width: 62.9%;
-    height: 3rem;
-    background-color: var(--blue);
-    color: var(--white-color);
-    border-radius: 3rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 2.7rem;
-    font-weight: 500;
+  width: 62.9%;
 }
 
 .iniciativas button {
-    background-color: var(--blue);
-    color: var(--white-color);
-    font-size: 3rem;
-    padding: 1rem 3em;
-    border-radius: 9999px;
-    margin: 3rem 0;
-    cursor: pointer;
-    transition: 0.3s;
-    box-shadow: 0 4px 8px 0 rgba(0, 105, 234, 0.4);
+  background-color: var(--blue);
+  color: var(--white-color);
+  font-size: clamp(1rem, 1.35vw, 1.25rem);
+  padding: 0.85rem clamp(1.5rem, 5vw, 3rem);
+  border-radius: var(--pill-radius);
+  margin: 1rem 0 0;
+  cursor: pointer;
+  transition: var(--transition-default);
+  box-shadow: 0 4px 8px 0 rgba(0, 105, 234, 0.4);
 }
 
 .iniciativas button:hover {
-    box-shadow: 0 8px 20px 0 rgba(0, 105, 234, 0.4);
-    transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 8px 20px 0 rgba(0, 105, 234, 0.4);
+  transform: translateY(-4px) scale(1.03);
 }
 
 /* SECTION DOAÇÃO - FORMULÁRIO */
 
 .doacao {
-    display: flex;
-    flex-flow: nowrap column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: auto;
-    margin: 4rem 0;
-    gap: 3rem;
+  display: flex;
+  flex-flow: nowrap column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  margin: clamp(3rem, 7vw, 5rem) 0;
+  gap: clamp(1.5rem, 3vw, 2.5rem);
+  padding: 0 1rem;
 }
 
 .doacao h2 {
-    font-size: 6rem;
+  font-size: clamp(2rem, 4vw, 3.8rem);
+  text-align: center;
+  line-height: 1.2;
 }
 
 .doacao-container h3 {
-    font-size: 3rem;
+  font-size: clamp(1.2rem, 2vw, 1.75rem);
 }
 
 .titulo-quantia {
-    font-size: 3rem;
-    text-align: center;
+  font-size: clamp(1.2rem, 2vw, 1.75rem);
+  text-align: center;
 }
 
 .doacao-container {
-    max-width: 90%;
-    height: auto;
-    border: 10px solid var(--yellow);
-    border-radius: 80px;
-    padding: 2rem;
-    display: flex;
-    flex-flow: nowrap column;
-    gap: 3rem;
+  width: min(100%, 1080px);
+  height: auto;
+  border: clamp(0.35rem, 1vw, 0.65rem) solid var(--yellow);
+  border-radius: clamp(1.5rem, 5vw, 4rem);
+  padding: clamp(1.25rem, 3vw, 2rem);
+  display: flex;
+  flex-flow: nowrap column;
+  gap: clamp(1.5rem, 3vw, 2.5rem);
+  background-color: rgba(255, 255, 255, 0.65);
 }
 
 .doacao-container2 {
-    display: flex;
-    flex-flow: nowrap row;
-    gap: 5%;
+  display: flex;
+  flex-flow: nowrap row;
+  gap: clamp(1.5rem, 5vw, 3rem);
 }
 
 .lado-esquerdo {
-    display: flex;
-    flex-flow: nowrap column;
-    width: 30%;
-    height: auto;
-    gap: 2.5rem;
+  display: flex;
+  flex-flow: nowrap column;
+  width: 32%;
+  min-width: 14rem;
+  height: auto;
+  gap: 1.25rem;
 }
 
 .campo-valor {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 1rem 0;
-    font-size: 3rem;
-    width: 100%;
-    box-shadow: 0 4px 8px 0 rgba(113, 89, 0, 0.3);
-    border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 1rem;
+  font-size: clamp(1.1rem, 2vw, 1.5rem);
+  width: 100%;
+  box-shadow: 0 4px 8px 0 rgba(113, 89, 0, 0.3);
+  border-radius: 1.25rem;
+  background-color: var(--white-color);
 }
 
 .campo-valor span {
-    margin-left: 1rem;
+  margin-right: 0.5rem;
 }
 
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
-    -webkit-appearance: none;
+  -webkit-appearance: none;
 }
 
-input[id="valor-doacao"] {
-    font-size: 3rem;
-    text-align: right;
-    width: 100%;
-    margin-right: 25px;
-    outline: none;
-    border-radius: inherit;
+input[id='valor-doacao'] {
+  font-size: clamp(1.1rem, 2vw, 1.5rem);
+  text-align: right;
+  width: 100%;
+  min-width: 0;
+  outline: none;
+  border-radius: inherit;
 }
 
 .valores-fixos {
-    display: flex;
-    flex-flow: nowrap row;
-    gap: 5%;
+  display: flex;
+  flex-flow: nowrap row;
+  gap: 0.75rem;
 }
 
-.valores-esquerda {
-    display: flex;
-    flex-flow: nowrap column;
-    width: 50%;
-    gap: 2.5rem;
-}
-
+.valores-esquerda,
 .valores-direita {
-    display: flex;
-    flex-flow: nowrap column;
-    width: 50%;
-    gap: 2.5rem;
+  display: flex;
+  flex-flow: nowrap column;
+  width: 50%;
+  gap: 0.85rem;
 }
 
 .doacao-container2 input:not(#valor-doacao),
-.doacao-container2 button:not(button[type="submit"]),
+.doacao-container2 button:not(button[type='submit']),
 .doacao-container2 textarea {
-    padding: 1rem 2rem;
-    box-shadow: 0 4px 8px 0 rgba(113, 89, 0, 0.3);
-    border-radius: 20px;
-    outline: none;
-    background-color: var(--white-color);
+  padding: 0.85rem 1rem;
+  box-shadow: 0 4px 8px 0 rgba(113, 89, 0, 0.3);
+  border-radius: 1rem;
+  outline: none;
+  background-color: var(--white-color);
 }
 
 .valores-fixos button {
-    padding: 12px 0;
-    font-size: 2rem;
-    transition: all 0.2s ease;
+  padding: 0.75rem 0.25rem;
+  font-size: clamp(0.95rem, 1.2vw, 1.1rem);
+  transition: all 0.2s ease;
 }
 
 .valores-fixos button:hover {
-    background-color: #ffdb80;
-    color: var(--black-color);
+  background-color: #ffdb80;
+  color: var(--black-color);
 }
 
 .valores-fixos button.ativo {
-    background-color: var(--yellow);
-    color: var(--yellow);
-    border: 1px solid var(--yellow);
-    border-color: var(--yellow);
-    transform: scale(1.05);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  background-color: var(--yellow);
+  color: var(--white-color);
+  border: 1px solid var(--yellow);
+  border-color: var(--yellow);
+  transform: scale(1.03);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
 .formulario {
-    display: flex;
-    flex-flow: nowrap column;
-    width: 70%;
-    height: auto;
+  display: flex;
+  flex-flow: nowrap column;
+  width: 68%;
+  min-width: 0;
+  height: auto;
 }
 
 .formulario p {
-    font-size: 2rem;
-    margin-bottom: 1.5rem;
+  font-size: clamp(1rem, 1.5vw, 1.25rem);
+  margin-bottom: 1rem;
 }
 
 .form-colunas {
-    display: flex;
-    flex-flow: nowrap row;
-    gap: 5%;
+  display: flex;
+  flex-flow: nowrap row;
+  gap: 1rem;
 }
 
 .coluna-esquerda {
-    display: flex;
-    flex-flow: nowrap column;
-    width: 70%;
-    gap: 1.5rem;
+  display: flex;
+  flex-flow: nowrap column;
+  width: 65%;
+  gap: 1rem;
 }
 
 .coluna-direita {
-    display: flex;
-    flex-flow: nowrap column;
-    width: 30%;
-    gap: 1.5rem;
+  display: flex;
+  flex-flow: nowrap column;
+  width: 35%;
+  gap: 1rem;
 }
 
-input[id="nome"] {
-    font-size: 1.8rem;
-    text-align: center;
-}
-
-input[id="idade"] {
-    font-size: 1.8rem;
-    text-align: center;
-}
-
-input[id="email"] {
-    font-size: 1.8rem;
-    text-align: center;
-}
-
-input[id="telefone"] {
-    font-size: 1.8rem;
-    text-align: center;
+input[id='nome'],
+input[id='idade'],
+input[id='email'],
+input[id='telefone'] {
+  font-size: clamp(0.95rem, 1.2vw, 1.1rem);
+  text-align: center;
+  min-width: 0;
 }
 
 .form-base {
-    display: flex;
-    flex-flow: nowrap row;
-    width: 100%;
-    margin-top: 1.5rem;
-    gap: 5%;
+  display: flex;
+  flex-flow: nowrap row;
+  width: 100%;
+  margin-top: 1rem;
+  gap: 1rem;
 }
 
 .form-base textarea {
-    font-size: 1.8rem;
-    text-align: center;
-    line-height: 1.6;
-    width: 65%;
-    overflow: hidden;
-    resize: none;
-    min-height: 230px;
+  font-size: clamp(0.95rem, 1.2vw, 1.1rem);
+  text-align: center;
+  line-height: 1.6;
+  width: 65%;
+  overflow: hidden;
+  resize: none;
+  min-height: 9rem;
 }
 
-.form-base button[type="submit"] {
-    background-color: var(--yellow);
-    color: var(--white-color);
-    font-size: 3rem;
-    padding: 1rem 6rem;
-    border-radius: 60px;
-    cursor: pointer;
-    margin-top: auto;
-    transition: 0.3s;
-    box-shadow: 0 4px 8px 0 rgba(234, 164, 0, 0.4);
+.form-base button[type='submit'] {
+  background-color: var(--yellow);
+  color: var(--white-color);
+  font-size: clamp(1rem, 1.5vw, 1.25rem);
+  padding: 0.85rem clamp(1.5rem, 4vw, 3rem);
+  border-radius: 3rem;
+  cursor: pointer;
+  margin-top: auto;
+  transition: var(--transition-default);
+  box-shadow: 0 4px 8px 0 rgba(234, 164, 0, 0.4);
 }
 
-.form-base button[type="submit"]:hover {
-    box-shadow: 0 8px 16px 0 rgba(234, 164, 0, 0.4);
-    transform: translateY(-5px) scale(1.05);
+.form-base button[type='submit']:hover {
+  box-shadow: 0 8px 16px 0 rgba(234, 164, 0, 0.4);
+  transform: translateY(-4px) scale(1.03);
 }
 
 /* SECTION PÓS FORMULÁRIO - COMPARTILHE */
 
 .pos-doacao {
-    display: flex;
-    flex-flow: nowrap column;
-    align-items: center;
-    gap: 3rem;
-    margin: 5rem 0;
+  display: flex;
+  flex-flow: nowrap column;
+  align-items: center;
+  gap: 1.5rem;
+  margin: clamp(3rem, 6vw, 5rem) auto;
+  padding: 0 1rem;
 }
 
 .pos-doacao p {
-    font-size: 2rem;
-    text-align: center;
-    width: 60ch;
+  font-size: clamp(1rem, 1.35vw, 1.25rem);
+  text-align: center;
+  width: min(100%, 60ch);
 }
 
 .botao-compartilhar {
-    background-color: var(--white);
-    color: var(--purple);
-    border: 1px solid var(--purple);
-    font-size: 2rem;
-    font-weight: 500;
-    padding: 1rem 4rem;
-    border-radius: 9999px;
-    margin: 1.5rem 0;
-    cursor: pointer;
-    transition: 0.3s;
+  background-color: var(--white-color);
+  color: var(--purple);
+  border: 1px solid var(--purple);
+  font-size: clamp(1rem, 1.35vw, 1.2rem);
+  font-weight: 500;
+  padding: 0.85rem 2.5rem;
+  border-radius: var(--pill-radius);
+  margin: 0.5rem 0;
+  cursor: pointer;
+  transition: var(--transition-default);
 }
 
 .botao-compartilhar:hover {
-    background-color: var(--purple);
-    color: var(--white-color);
-    box-shadow: 4px 8px 16px 0 rgba(102, 0, 197, 0.4);
-    transform: translateY(-5px) scale(1.05);
+  background-color: var(--purple);
+  color: var(--white-color);
+  box-shadow: 4px 8px 16px 0 rgba(102, 0, 197, 0.4);
+  transform: translateY(-4px) scale(1.03);
 }
 
 /* RODAPÉ */
 
 footer {
-    width: 100%;
-    height: auto;
-    padding: 5rem 5rem 2rem 5rem;
-    gap: 4rem;
-    display: flex;
-    flex-flow: nowrap column;
-    justify-content: space-between;
-    align-items: center;
-    background-color: var(--purple);
-    color: var(--white-color);
-    font-size: 2rem;
-    font-weight: 450;
+  width: 100%;
+  height: auto;
+  padding: clamp(2.5rem, 6vw, 5rem) clamp(1rem, 5vw, 4rem) 2rem;
+  gap: clamp(2rem, 4vw, 3rem);
+  display: flex;
+  flex-flow: nowrap column;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--purple);
+  color: var(--white-color);
+  font-size: clamp(0.95rem, 1.25vw, 1.15rem);
+  font-weight: 450;
 }
 
 .footer-row1 {
-    width: 100%;
-    display: flex;
-    flex-flow: nowrap row;
-    justify-content: space-between;
+  width: min(100%, 1280px);
+  display: flex;
+  flex-flow: wrap row;
+  justify-content: space-between;
+  gap: clamp(2rem, 5vw, 4rem);
 }
 
 .titulo-footer {
-    font-size: 3.5rem;
+  font-size: clamp(1.3rem, 2.2vw, 1.8rem);
+  font-weight: 600;
 }
 
 .contacts {
-    display: flex;
-    flex-flow: nowrap column;
-    justify-content: space-around;
-    gap: 3rem;
+  display: flex;
+  flex-flow: nowrap column;
+  justify-content: flex-start;
+  gap: 1.5rem;
 }
 
 .contacts-list {
-    display: flex;
-    flex-flow: nowrap column;
-    justify-content: center;
-    gap: 3.3rem;
+  display: flex;
+  flex-flow: nowrap column;
+  justify-content: center;
+  gap: 1rem;
 }
 
-.contacts .ícone {
-    height: 1.5em;
-    /* Escala com o tamanho do texto */
+.contacts .icone {
+  height: 1.35em;
+  width: auto;
+  flex-shrink: 0;
+  /* Escala com o tamanho do texto */
 }
 
-.Telefone {
-    display: flex;
-    flex-flow: nowrap row;
-    align-items: center;
-    gap: 0.5rem;
-}
-
-.Instagram {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-}
-
-.Youtube {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-}
-
-.Facebook {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-}
-
+.Telefone,
+.Instagram,
+.Youtube,
+.Facebook,
 .Twitter {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
 }
 
-.Twitter .ícone {
-    height: 1.1em;
-    width: auto;
+.Twitter .icone {
+  height: 1.1em;
+  width: auto;
 }
 
 .footer-saiba {
-    display: flex;
-    flex-flow: nowrap column;
-    justify-content: center;
-    gap: 2.7rem;
-    transform: translateX(120px);
+  display: flex;
+  flex-flow: nowrap column;
+  justify-content: flex-start;
+  gap: 1.5rem;
 }
 
 footer nav {
-    display: flex;
-    flex-flow: nowrap column;
-    justify-content: center;
-    gap: 3.3rem;
+  display: flex;
+  flex-flow: nowrap column;
+  justify-content: center;
+  gap: 1rem;
 }
 
 footer a {
-    color: var(--link-color);
-    text-decoration: none;
+  color: var(--link-color);
+  text-decoration: none;
 }
 
 footer a:visited {
-    color: var(--link-color);
+  color: var(--link-color);
 }
 
 footer a:hover,
 footer a:active {
-    color: var(--link-hover)
+  color: var(--link-hover);
 }
 
-.endereços {
-    display: flex;
-    flex-flow: nowrap column;
-    justify-content: center;
-    align-items: flex-end;
-    gap: 3rem;
+.enderecos {
+  display: flex;
+  flex-flow: nowrap column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 1rem;
 }
 
-.endereços img {
-    width: 100%;
-    max-width: 200px;
-    height: auto;
+.enderecos img {
+  width: 100%;
+  max-width: 8rem;
+  height: auto;
 }
 
 .footer-row2 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 2rem;
+  width: min(100%, 1280px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  text-align: center;
 }
 
 .logo-footer {
-    width: 100%;
-    max-width: 450px;
-    height: auto;
-    transition: 0.3s;
+  width: auto;
+  max-width: clamp(10rem, 22vw, 18rem);
+  max-height: 7rem;
+  height: auto;
+  object-fit: contain;
+  flex-shrink: 0;
+  display: block;
+  transition: var(--transition-default);
 }
 
 .logo-footer:hover {
-    transform: translateY(-5px) scale(1.15);
+  transform: translateY(-4px) scale(1.03);
+}
+
+@media (max-width: 900px) {
+  header {
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-top: 1rem;
+  }
+
+  header nav {
+    order: 3;
+    width: 100%;
+    flex-wrap: wrap;
+  }
+
+  .Gente-como-vc {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .logo {
+    width: min(70vw, 22rem);
+    max-height: 22rem;
+  }
+
+  .texto-gente {
+    align-items: center;
+  }
+
+  .doacao-container2 {
+    flex-direction: column;
+  }
+
+  .lado-esquerdo,
+  .formulario {
+    width: 100%;
+  }
+
+  .footer-row1,
+  .footer-row2 {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .enderecos {
+    align-items: center;
+  }
+}
+
+@media (max-width: 640px) {
+  body {
+    background-size: 100% 42rem;
+  }
+
+  .logo-titulo {
+    max-width: min(76vw, 18rem);
+    max-height: 5.5rem;
+  }
+
+  header nav {
+    gap: 0.75rem;
+  }
+
+  .texto-principal {
+    min-height: 26rem;
+  }
+
+  .texto-principal h1 {
+    text-shadow: 5px 5px 0 rgba(157, 0, 255, 0.55);
+  }
+
+  .card-covid,
+  .card-brinquedos,
+  .card-natalino,
+  .card-comidas,
+  .card-aviao,
+  .card-bebe,
+  .card-feirao,
+  .card-roupas,
+  .card-maternidade {
+    width: 100%;
+  }
+
+  .form-colunas,
+  .form-base {
+    flex-direction: column;
+  }
+
+  .coluna-esquerda,
+  .coluna-direita,
+  .form-base textarea {
+    width: 100%;
+  }
+
+  .historias button,
+  .iniciativas button,
+  .botao-compartilhar,
+  .form-base button[type='submit'] {
+    width: 100%;
+  }
 }
