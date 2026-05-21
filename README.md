@@ -1,47 +1,64 @@
-# ONG (fictícia) 'Guardiões da Infância'
+# Guardiões da Infância — Institutional Landing Page
 
-Um website para compartilhar com usuários a causa de uma ONG com foco em ajudar crianças e suas famílias, e convencer o público a contribuir com essa causa. 
-
----
-
-## Índice
-
-- [Sobre](#Sobre)
-- [Tecnologias](#Tecnologias)
-- [Design System](#Design-system)
-- [Autores](#Autores)
+Landing page desenvolvida para representar digitalmente uma organização social fictícia voltada ao apoio de crianças e famílias em situação de vulnerabilidade. O projeto foi construído com foco em comunicação institucional, apelo visual emocional e estrutura orientada à conversão de doações e engajamento público.
 
 ---
 
-## Sobre
+## Visão Geral
 
-O website representa a face digital da ONG Guardiões da Infância, uma instituição dedicada a proteger, nutrir e inspirar crianças em situação de vulnerabilidade social, por meio da distribuição de suprimentos (alimentos, roupas, brinquedos, material escolar) e da criação de experiências alegres que valorizem a infância.
+O projeto simula a presença digital de uma ONG fictícia chamada “Guardiões da Infância”, criada para explorar conceitos de design institucional, narrativa visual, hierarquia de informação e experiência do usuário aplicada ao terceiro setor.
 
-Indo além de apoio material e alimentício, a ONG busca restaurar a dignidade emocional da criança, reforçando sentimentos de acolhimento, pertencimento e esperança, fazendo com que o site reflita esse compromisso com a leveza da infância, sem ignorar o peso real da missão.
+A proposta do website é transmitir credibilidade, clareza e empatia através de uma interface acessível e emocionalmente orientada, utilizando elementos visuais e estruturais pensados para reforçar confiança e incentivar ações do usuário.
 
-O público alvo do projeto são adultos com indepedência financeira, com ou sem filhos, que tenham apreço pelas crianças e simpatia pela dor das milhares que sofrem mundo afora. 
-Portanto, a ideia de sucesso do site é conseguir convencer este público a doar alguma quantia, contribuindo financeiramente com a missão da Ong sem comprometer seus gastos e despesas cotidianas, ou, caso não possa doar, que possa ao menos compartilhar com conhecidos e espalhar a causa. 
+Embora o contexto institucional seja fictício, o projeto foi desenvolvido seguindo padrões reais de landing pages voltadas a captação de apoio público e conscientização social.
+
+| Hero | Histórias | Iniciativas | 
+| :-----: | :-----: | :-----: |
+| ![guardiões-hero](https://github.com/user-attachments/assets/03c25868-8669-49ae-8e62-6c6caa4934ad) | ![guardiões-histórias](https://github.com/user-attachments/assets/33d3e558-bf18-4045-a995-ad0f6a8695f3) | ![guardiões-iniciativas](https://github.com/user-attachments/assets/2c5f5318-a5b3-48ca-b121-e40a1a2b1e9e) |
+
+---
+
+## Objetivos do Projeto
+
+- Desenvolver uma landing page institucional responsiva;
+- Praticar construção de interfaces com foco em comunicação emocional;
+- Trabalhar hierarquia visual, acessibilidade e composição de conteúdo;
+- Simular estratégias de conversão aplicadas a páginas de doação;
+- Consolidar fundamentos de HTML, CSS e JavaScript em um projeto completo de front-end.
+
+---
+
+## Funcionalidades
+
+- Layout responsivo para diferentes dispositivos;
+- Seções institucionais organizadas por hierarquia de leitura;
+- Estrutura visual voltada à retenção e conversão;
+- Elementos de call-to-action para incentivo de engajamento;
+- Design system centralizado no Figma;
+- Identidade visual personalizada.
 
 ---
 
 ## Tecnologias
 
-- HTML5, CSS3, JavaScript (ES6+)
-- Figma (para prototipação e design system)
-- Procreate (para ilustração da logo)
+- HTML5
+- CSS3
+- JavaScript (ES6+)
+- Figma
+- Procreate
 
 ---
 
 ## Design System
-Este projeto utiliza um design system criado e gerenciado via Figma.
 
-Como acessar:
+O projeto utiliza um design system desenvolvido no Figma para padronização visual, definição de componentes e consistência de interface.
 
-Link público do arquivo no Figma: https://www.figma.com/design/mZoIlymedfzsO3QoxJIVH3/PI-Design_system?node-id=0-1&t=0ZPOgmVshCyLej6Y-1
+Figma:  
+[Design System no Figma](https://www.figma.com/design/mZoIlymedfzsO3QoxJIVH3/PI-Design_system?node-id=0-1&t=0ZPOgmVshCyLej6Y-1&utm_source=chatgpt.com)
 
 ---
 
 ## Autores
-Rafael Reis – https://github.com/RafaelReis29
 
-Stephany Gomes – https://github.com/Ixthe
+- Rafael Reis — [GitHub](https://github.com/RafaelReis29?utm_source=chatgpt.com)
+- Stephany Gomes — [GitHub](https://github.com/Ixthe?utm_source=chatgpt.com)
