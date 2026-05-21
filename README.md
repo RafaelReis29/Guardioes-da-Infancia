@@ -14,6 +14,7 @@ Embora o contexto institucional seja fictício, o projeto foi desenvolvido segui
 
 | Hero | Histórias | Iniciativas | 
 | :-----: | :-----: | :-----: |
+| ![guardiões-hero](https://github.com/user-attachments/assets/03c25868-8669-49ae-8e62-6c6caa4934ad) | ![guardiões-histórias](https://github.com/user-attachments/assets/33d3e558-bf18-4045-a995-ad0f6a8695f3) | ![guardiões-iniciativas](https://github.com/user-attachments/assets/2c5f5318-a5b3-48ca-b121-e40a1a2b1e9e) |
 
 ---
 
