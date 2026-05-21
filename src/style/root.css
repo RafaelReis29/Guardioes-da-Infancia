@@ -22,7 +22,7 @@
   --black-shadow: rgba(0, 0, 0, 0.7);
   --gray-color-text: #d9d9d9;
   --link-color: #ffffff;
-  --link-hover: #ffbf0c;
+  --link-hover: #ffd231;
   --purple: #8338ea;
   --blue: #3a86fe;
   --yellow: #f5c000;
@@ -339,6 +339,7 @@ header a:active {
   transition: var(--transition-default);
   border-radius: 2rem;
   background-color: var(--white-color);
+  border: 2px solid var(--black-color);
 }
 
 .card-covid:hover,
@@ -471,6 +472,7 @@ header a:active {
   transition: var(--transition-default);
   border-radius: 2rem;
   background-color: var(--white-color);
+  border: 2px solid var(--black-color);
 }
 
 .card-feirao:hover,
@@ -635,6 +637,7 @@ header a:active {
   box-shadow: 0 4px 8px 0 rgba(113, 89, 0, 0.3);
   border-radius: 1.25rem;
   background-color: var(--white-color);
+  border: 2px solid var(--black-color);
 }
 
 .campo-valor span {
@@ -683,6 +686,7 @@ input[id='valor-doacao'] {
   padding: 0.75rem 0.25rem;
   font-size: clamp(0.95rem, 1.2vw, 1.1rem);
   transition: all 0.2s ease;
+  border: 1px solid var(--black-color);
 }
 
 .valores-fixos button:hover {
@@ -691,10 +695,9 @@ input[id='valor-doacao'] {
 }
 
 .valores-fixos button.ativo {
-  background-color: var(--yellow);
-  color: var(--white-color);
-  border: 1px solid var(--yellow);
-  border-color: var(--yellow);
+  color: var(--yellow);
+  font-weight: 600;
+  border: 2px solid var(--black-color);
   transform: scale(1.03);
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
@@ -739,6 +742,7 @@ input[id='telefone'] {
   font-size: clamp(0.95rem, 1.2vw, 1.1rem);
   text-align: center;
   min-width: 0;
+  border: 2px solid var(--black-color);
 }
 
 .form-base {
@@ -757,11 +761,11 @@ input[id='telefone'] {
   overflow: hidden;
   resize: none;
   min-height: 9rem;
+  border: 2px solid var(--black-color);
 }
 
 .form-base button[type='submit'] {
-  background-color: var(--yellow);
-  color: var(--white-color);
+  color: var(--black-color);
   font-size: clamp(1rem, 1.5vw, 1.25rem);
   padding: 0.85rem clamp(1.5rem, 4vw, 3rem);
   border-radius: 3rem;
@@ -769,6 +773,7 @@ input[id='telefone'] {
   margin-top: auto;
   transition: var(--transition-default);
   box-shadow: 0 4px 8px 0 rgba(234, 164, 0, 0.4);
+  border: 2px solid var(--black-color);
 }
 
 .form-base button[type='submit']:hover {
